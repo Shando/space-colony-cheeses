@@ -1,0 +1,29 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://b5qubg5ysnoqb"]
+
+[ext_resource type="Texture2D" uid="uid://c1t5w14p8cuct" path="res://Assets/Textures/0001_ZZ_Other/dry_dirt2/dry-dirt2-albedo.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c1pvjlaib6xqy" path="res://Assets/Textures/0001_ZZ_Other/dry_dirt2/dry-dirt2-roughness.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ceelaxssehbc0" path="res://Assets/Textures/0001_ZZ_Other/dry_dirt2/dry-dirt2-metalness.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://clqos1vbv0wup" path="res://Assets/Textures/0001_ZZ_Other/dry_dirt2/dry-dirt2-albedo_test.png" id="3_nlma8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7tvg"]
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("3_nlma8")
+
+[sub_resource type="CompressedTexture2D" id="1"]
+
+[resource]
+next_pass = SubResource("StandardMaterial3D_e7tvg")
+cull_mode = 2
+albedo_color = Color(0, 0.698039, 1, 1)
+albedo_texture = ExtResource("1")
+metallic_specular = 0.0
+metallic_texture = ExtResource("3")
+roughness_texture = ExtResource("2")
+emission = Color(0, 0.698039, 1, 1)
+emission_energy_multiplier = 2.0
+rim = 0.38
+rim_tint = 0.96
+rim_texture = SubResource("1")
+heightmap_enabled = true
+heightmap_scale = 0.05
+heightmap_flip_texture = true

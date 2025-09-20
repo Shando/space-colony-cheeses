@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlrf00icd4s5r"]
+
+[ext_resource type="PackedScene" uid="uid://n1l7twret382" path="res://Assets/Models/square_fissure.gltf" id="1_p33ne"]
+[ext_resource type="Material" uid="uid://b7n0u7gsm1cs5" path="res://Materials/dirt-red.tres" id="2_g1fnj"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="3_pg00e"]
+[ext_resource type="Material" uid="uid://b78w3c7s4lwhq" path="res://Particles/steam.tres" id="4_dc3ml"]
+[ext_resource type="Material" uid="uid://d2e28144lrkys" path="res://Particles/steam_2.tres" id="5_3niti"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p33ne"]
+points = PackedVector3Array(-2.13, 0, -2.13, -2.13, 1, -2.13, 2.13, 0, -2.13, -2.13, 0, 2.13, -2.13, 1, 2.13, 2.13, 1, -2.13, 2.13, 0, 2.13, 2.13, 1, 2.13)
+
+[sub_resource type="QuadMesh" id="QuadMesh_0omfi"]
+material = ExtResource("5_3niti")
+
+[node name="square_fissure" groups=["Board"] instance=ExtResource("1_p33ne")]
+
+[node name="StaticMesh" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_g1fnj")
+surface_material_override/1 = ExtResource("2_g1fnj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticMesh" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticMesh/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_p33ne")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="1"]
+amount = 45
+process_material = ExtResource("4_dc3ml")
+draw_pass_1 = SubResource("QuadMesh_0omfi")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="2"]
+script = ExtResource("3_pg00e")
+broadcast = 2
+refresh_rate = 20.0
+node_path = NodePath("..")
+properties = PackedStringArray("position", "basis")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = ExtResource("3_pg00e")

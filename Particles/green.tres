@@ -1,0 +1,11 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://btoe6h3647snt"]
+
+[resource]
+angle_min = 1.07288e-05
+angle_max = 1.07288e-05
+direction = Vector3(0, 1, 0)
+spread = 0.0
+gravity = Vector3(0, 9.8, 0)
+scale_min = 0.0
+scale_max = 0.0
+color = Color(0, 1, 0, 1)

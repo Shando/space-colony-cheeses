@@ -1,0 +1,192 @@
+[gd_scene load_steps=11 format=3 uid="uid://b7g2a4nwsfve0"]
+
+[ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="1_cpisx"]
+[ext_resource type="Script" uid="uid://bl37hh8ws6hj0" path="res://Menus/player_customization_menu.gd" id="1_objew"]
+[ext_resource type="Texture2D" uid="uid://bd1dudyjs6m5" path="res://Assets/Textures/crab_nasa.jpg" id="3_n1x4k"]
+[ext_resource type="FontFile" uid="uid://c465n5rovhtmk" path="res://Fonts/Zebulon.otf" id="4_wf6pn"]
+[ext_resource type="PackedScene" uid="uid://boir4qp8fpp3b" path="res://Menus/Help.tscn" id="5_te1ow"]
+[ext_resource type="AudioStream" uid="uid://dukfg3jsicjo6" path="res://Assets/Sounds/Music/call_from_out_there.ogg" id="6_te1ow"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5u4xs"]
+texture = ExtResource("3_n1x4k")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44gi0"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0231, 0.1617, 0.20019999, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.15, 0.55, 0.82, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_te1ow"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0231, 0.1617, 0.20019999, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.15, 0.55, 0.82, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syttu"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0231, 0.1617, 0.20019999, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.15, 0.55, 0.82, 1)
+corner_radius_top_left = 256
+corner_radius_top_right = 256
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 256
+corner_detail = 20
+anti_aliasing = false
+
+[node name="PlayerCustomizationMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_objew")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_cpisx")
+theme_override_styles/panel = SubResource("StyleBoxTexture_5u4xs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_wf6pn")
+theme_override_font_sizes/font_size = 64
+text = "SPACE COLONY CHEESES II"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Select Colour"
+horizontal_alignment = 1
+
+[node name="Color" type="ColorPicker" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/sample_focus = SubResource("StyleBoxFlat_44gi0")
+theme_override_styles/picker_focus_rectangle = SubResource("StyleBoxFlat_te1ow")
+theme_override_styles/picker_focus_circle = SubResource("StyleBoxFlat_syttu")
+alignment = 1
+edit_alpha = false
+picker_shape = 2
+sampler_visible = false
+color_modes_visible = false
+sliders_visible = false
+hex_visible = false
+presets_visible = false
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Username (3 - 20 Characters)"
+horizontal_alignment = 1
+
+[node name="Username" type="LineEdit" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Spacer1" type="Control" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+theme = ExtResource("1_cpisx")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "CONTINUE"
+
+[node name="Back" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+theme = ExtResource("1_cpisx")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "BACK"
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ErrorText" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Help" parent="." instance=ExtResource("5_te1ow")]
+visible = false
+layout_mode = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_te1ow")
+autoplay = true
+bus = &"Music"
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer/HBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]

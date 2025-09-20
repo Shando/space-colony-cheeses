@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtgsiqx25jj2r"]
+
+[ext_resource type="PackedScene" uid="uid://c1mh6tpfxh5hu" path="res://Assets/Models/square.gltf" id="1_f5kqw"]
+[ext_resource type="Material" uid="uid://dmgiav4xl265y" path="res://Materials/dirt-yellow.tres" id="2_vsv4i"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="3_gr5i5"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f5kqw"]
+points = PackedVector3Array(-2.13, 0, -2.13, -2.13, 1, -2.13, 2.13, 0, -2.13, -2.13, 0, 2.13, -2.13, 1, 2.13, 2.13, 1, -2.13, 2.13, 0, 2.13, 2.13, 1, 2.13)
+
+[node name="square" groups=["Board"] instance=ExtResource("1_f5kqw")]
+
+[node name="StaticMesh" parent="." index="0"]
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_vsv4i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticMesh" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticMesh/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_f5kqw")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="1"]
+script = ExtResource("3_gr5i5")
+broadcast = 2
+refresh_rate = 20.0
+node_path = NodePath("..")
+properties = PackedStringArray("position", "basis")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = ExtResource("3_gr5i5")

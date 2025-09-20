@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgbv7r0yrg4yk"]
+
+[ext_resource type="Script" uid="uid://dqlmi7hfqm0x2" path="res://GD-SyncTemplates/TextChat/text_chat.gd" id="1_rkot3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpmys"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.021375, 0.149625, 0.18524998, 1)
+border_color = Color(0.016199999, 0.1134, 0.14039999, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3yebx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqrqq"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0231, 0.1617, 0.20019999, 1)
+border_width_bottom = 2
+border_color = Color(0.01965, 0.13755, 0.17029999, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qibxx"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0231, 0.1617, 0.20019999, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.15, 0.55, 0.82, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xja7x"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.026999999, 0.189, 0.23399998, 1)
+border_width_bottom = 2
+border_color = Color(0.021, 0.147, 0.182, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+anti_aliasing = false
+
+[node name="TextChat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rkot3")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MessageContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+
+[node name="TemplateMessage" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer/MessageContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpmys")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3yebx")
+bbcode_enabled = true
+text = "[Channel][Username] Test message"
+fit_content = true
+scroll_active = false
+scroll_following = true
+
+[node name="TypingContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_stretch_ratio = 0.2
+
+[node name="TextEdit" type="TextEdit" parent="PanelContainer/VBoxContainer/TypingContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_kqrqq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qibxx")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_xja7x")
+
+[connection signal="text_changed" from="PanelContainer/VBoxContainer/TypingContainer/TextEdit" to="." method="_on_text_changed"]

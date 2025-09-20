@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://d4hf8j7ff14kr"]
+
+[ext_resource type="PackedScene" uid="uid://yigb13aunkvm" path="res://Assets/Models/octagon_grass.gltf" id="1_lwe2o"]
+[ext_resource type="Material" uid="uid://dmgiav4xl265y" path="res://Materials/dirt-yellow.tres" id="2_o1url"]
+[ext_resource type="Material" path="res://Materials/grass.tres" id="3_6g4ya"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="4_7suik"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lwe2o"]
+points = PackedVector3Array(-2.10496, 0, -5.08134, -5.08134, 0, -2.10496, -2.10496, 1, -5.08134, 2.10396, 0, -5.08134, -5.08134, 0, 2.10396, -5.08134, 1, -2.10496, 2.10396, 1, -5.08134, 5.08134, 0, -2.10496, -5.08134, 1, 2.10396, -2.10496, 0, 5.08134, 5.08134, 1, -2.10496, 5.08134, 0, 2.10396, -2.10496, 1, 5.08134, 2.10396, 0, 5.08134, 5.08134, 1, 2.10396, 2.10396, 1, 5.08134)
+
+[node name="octagon_grass" groups=["Board"] instance=ExtResource("1_lwe2o")]
+
+[node name="StaticMesh" parent="." index="0"]
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_o1url")
+surface_material_override/1 = ExtResource("2_o1url")
+surface_material_override/2 = ExtResource("3_6g4ya")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticMesh" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticMesh/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_lwe2o")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="1"]
+script = ExtResource("4_7suik")
+broadcast = 2
+refresh_rate = 20.0
+node_path = NodePath("..")
+properties = PackedStringArray("position", "basis")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = ExtResource("4_7suik")

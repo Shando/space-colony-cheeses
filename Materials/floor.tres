@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://bfp26coc6d2fc"]
+
+[ext_resource type="Texture2D" uid="uid://dtwqcxv2iinq0" path="res://Assets/Textures/0001_Metals/metalgrid2-bl/metalgrid2_basecolor.png" id="1_c36mq"]
+[ext_resource type="Texture2D" uid="uid://du6xkwbyhlsqd" path="res://Assets/Textures/0001_Metals/metalgrid2-bl/metalgrid2_AO.png" id="2_1hn5a"]
+[ext_resource type="Texture2D" uid="uid://peiveo68wsjk" path="res://Assets/Textures/0001_Metals/metalgrid2-bl/metalgrid2_metallic.png" id="3_3j3ns"]
+[ext_resource type="Texture2D" uid="uid://bm7idfiscvk3o" path="res://Assets/Textures/0001_Metals/metalgrid2-bl/metalgrid2_normal-ogl.png" id="4_ciprp"]
+[ext_resource type="Texture2D" uid="uid://byng6j7ev8njn" path="res://Assets/Textures/0001_Metals/metalgrid2-bl/metalgrid2_roughness.png" id="5_uwyuy"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_c36mq")
+metallic = 1.0
+metallic_texture = ExtResource("3_3j3ns")
+roughness_texture = ExtResource("5_uwyuy")
+normal_enabled = true
+normal_texture = ExtResource("4_ciprp")
+ao_enabled = true
+ao_texture = ExtResource("2_1hn5a")

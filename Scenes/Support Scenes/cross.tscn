@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://djiy0yqcedv3p"]
+
+[ext_resource type="PackedScene" uid="uid://baqod01vsv4wl" path="res://Assets/Models/Cross.gltf" id="1"]
+[ext_resource type="Material" uid="uid://c638mdbkjs0fb" path="res://Materials/cross.tres" id="2"]
+[ext_resource type="Script" uid="uid://ce75nnijwfl1t" path="res://Scenes/Support Scenes/cross.gd" id="3"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="4_eytec"]
+
+[node name="Cross" groups=["Other"] instance=ExtResource("1")]
+script = ExtResource("3")
+
+[node name="StaticMesh" parent="." index="0"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="1"]
+script = ExtResource("4_eytec")
+broadcast = 2
+refresh_rate = 20
+node_path = NodePath("..")
+properties = PackedStringArray("position")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = ExtResource("4_eytec")

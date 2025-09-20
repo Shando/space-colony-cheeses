@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://buc4rerqq6y5b"]
+
+[ext_resource type="PackedScene" uid="uid://beswcv7d501ra" path="res://Assets/Models/octagon_fissure.gltf" id="1"]
+[ext_resource type="Material" uid="uid://dmblqu15d8y0m" path="res://Materials/lunar_rock.tres" id="2_87g4c"]
+[ext_resource type="Material" uid="uid://rt6s38g6bgor" path="res://Particles/smoke.tres" id="4"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="5_7d4og"]
+[ext_resource type="Material" uid="uid://d2e28144lrkys" path="res://Particles/steam_2.tres" id="5_ly0ih"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_st8t8"]
+material = ExtResource("5_ly0ih")
+
+[node name="octagon_fissure" groups=["Board"] instance=ExtResource("1")]
+
+[node name="StaticMesh" parent="." index="0"]
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_87g4c")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="1"]
+amount = 45
+process_material = ExtResource("4")
+draw_pass_1 = SubResource("QuadMesh_st8t8")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="2"]
+script = ExtResource("5_7d4og")
+broadcast = 2
+refresh_rate = 20
+node_path = NodePath("..")
+properties = PackedStringArray("position", "basis")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = "uid://c0a3hvm74q10i"

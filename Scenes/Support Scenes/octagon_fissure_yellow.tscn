@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://idngbf25ffcu"]
+
+[ext_resource type="PackedScene" uid="uid://beswcv7d501ra" path="res://Assets/Models/octagon_fissure.gltf" id="1_scjyx"]
+[ext_resource type="Material" uid="uid://dmgiav4xl265y" path="res://Materials/dirt-yellow.tres" id="2_jmgab"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="3_s1wiv"]
+[ext_resource type="Material" uid="uid://rt6s38g6bgor" path="res://Particles/smoke.tres" id="4_sc8yy"]
+[ext_resource type="Material" uid="uid://d2e28144lrkys" path="res://Particles/steam_2.tres" id="5_amkc0"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_scjyx"]
+points = PackedVector3Array(-2.10496, 0, -5.08134, -5.08134, 0, -2.10496, -2.10496, 1, -5.08134, 2.10396, 0, -5.08134, -5.08134, 0, 2.10396, -5.08134, 1, -2.10496, 2.10396, 1, -5.08134, 5.08134, 0, -2.10496, -5.08134, 1, 2.10396, -2.10496, 0, 5.08134, 5.08134, 1, -2.10496, 5.08134, 0, 2.10396, -2.10496, 1, 5.08134, 2.10396, 0, 5.08134, 5.08134, 1, 2.10396, 2.10396, 1, 5.08134)
+
+[sub_resource type="QuadMesh" id="QuadMesh_st8t8"]
+material = ExtResource("5_amkc0")
+
+[node name="octagon_fissure" groups=["Board"] instance=ExtResource("1_scjyx")]
+
+[node name="StaticMesh" parent="." index="0"]
+transform = Transform3D(0.9999398, 0.009329604, -0.0057748756, -0.010839381, 0.92160684, -0.38797387, 0.0017025146, 0.38801312, 0.92165244, 0, 0, 0)
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_jmgab")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticMesh" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticMesh/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_scjyx")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="1"]
+amount = 45
+process_material = ExtResource("4_sc8yy")
+draw_pass_1 = SubResource("QuadMesh_st8t8")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="2"]
+script = ExtResource("3_s1wiv")
+broadcast = 2
+refresh_rate = 20
+node_path = NodePath("..")
+properties = PackedStringArray("position", "basis")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = "uid://c0a3hvm74q10i"

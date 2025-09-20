@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://37s65px5exoa"]
+
+[ext_resource type="PackedScene" uid="uid://cyeqojt4fiujs" path="res://Assets/Models/lightning.gltf" id="1"]
+[ext_resource type="Material" uid="uid://c2jpjk4fkayna" path="res://Materials/lightning.tres" id="2"]
+[ext_resource type="Script" uid="uid://cis1guerlrfqb" path="res://Scenes/Support Scenes/lightning.gd" id="3"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="4_g5spp"]
+
+[node name="lightning" groups=["Other"] instance=ExtResource("1")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("3")
+
+[node name="StaticMesh" parent="." index="0"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="1"]
+script = ExtResource("4_g5spp")
+broadcast = 2
+refresh_rate = 20.0
+node_path = NodePath("..")
+properties = PackedStringArray("position")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = ExtResource("4_g5spp")

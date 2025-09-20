@@ -1,0 +1,162 @@
+[gd_scene load_steps=11 format=3 uid="uid://5quswar7oaeo"]
+
+[ext_resource type="Script" uid="uid://4bcix6h0na5o" path="res://Menus/lobby.gd" id="1_8ca5k"]
+[ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="2_s2cyl"]
+[ext_resource type="PackedScene" uid="uid://dgbv7r0yrg4yk" path="res://GD-SyncTemplates/TextChat/text_chat.tscn" id="3_w30kf"]
+[ext_resource type="Texture2D" uid="uid://bd1dudyjs6m5" path="res://Assets/Textures/crab_nasa.jpg" id="3_xhfsk"]
+[ext_resource type="FontFile" uid="uid://c465n5rovhtmk" path="res://Fonts/Zebulon.otf" id="4_wq3kq"]
+[ext_resource type="FontFile" uid="uid://p1vs0hic5xim" path="res://Fonts/NotoSans-Bold.ttf" id="5_p0xld"]
+[ext_resource type="PackedScene" uid="uid://boir4qp8fpp3b" path="res://Menus/Help.tscn" id="6_vmcxt"]
+[ext_resource type="AudioStream" uid="uid://dukfg3jsicjo6" path="res://Assets/Sounds/Music/call_from_out_there.ogg" id="8_ltp26"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_weivy"]
+texture = ExtResource("3_xhfsk")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0xld"]
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8ca5k")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_s2cyl")
+theme_override_styles/panel = SubResource("StyleBoxTexture_weivy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_wq3kq")
+theme_override_font_sizes/font_size = 64
+text = "SPACE COLONY CHEESES II"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="WidthSpacer" type="Control" parent="PanelContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.882353, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Players"
+horizontal_alignment = 1
+
+[node name="PlayerCount" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.882353, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "0/0"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"GDPanel"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer/VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="PlayerList" type="VBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer/PanelContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Spacer1" type="Control" parent="PanelContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Waiting" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Waiting for host to start."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Start" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+theme = ExtResource("2_s2cyl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "START"
+
+[node name="Leave" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+theme = ExtResource("2_s2cyl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "LEAVE"
+
+[node name="Label" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p0xld")
+
+[node name="ChatContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="ChatContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("5_p0xld")
+theme_override_font_sizes/font_size = 24
+text = "Chat"
+horizontal_alignment = 1
+
+[node name="TextChat" parent="ChatContainer" instance=ExtResource("3_w30kf")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+open_action_name = "open_chat"
+cancel_action_name = "pause"
+
+[node name="Help" parent="." instance=ExtResource("6_vmcxt")]
+visible = false
+layout_mode = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ltp26")
+bus = &"Music"
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Leave" to="." method="_on_leave_pressed"]

@@ -1,0 +1,140 @@
+[
+		{
+			"max": 3,
+			"model": "crystal_powerplant",
+			"type": "Crystal Powerplant"
+			"mod": 2
+		},
+		{
+			"max": 4,
+			"model": "powerplant",
+			"type": "Geothermal Powerplant"
+			"mod": 3
+		},
+		{
+			"max": 1,
+			"model": "altar_2",
+			"type": "Catalogue Store"
+			"mod": 4
+		},
+		{
+			"max": 1,
+			"model": "portal",
+			"type": "Portal"
+			"mod": 5
+		},
+		{
+			"max": 1,
+			"model": "construction",
+			"type": "Construction"
+			"mod": 6
+		},
+		{
+			"max": 1,
+			"model": "command_center_1",
+			"type": "Veterinary"
+			"mod": 7
+		},
+		{
+			"max": 4,
+			"model": "rocket_silo",
+			"type": "Hub"
+			"mod": 8
+		},
+		{
+			"max": 1,
+			"model": "tower",
+			"type": "Beef Store"
+			"mod": 9
+		},
+		{
+			"max": 1,
+			"model": "fuel_depot",
+			"type": "Butter Store"
+			"mod": 10
+		},
+		{
+			"max": 1,
+			"model": "tower",
+			"type": "Cheese Store"
+			"mod": 11
+		},
+		{
+			"max": 1,
+			"model": "fuel_depot",
+			"type": "Cream Store"
+			"mod": 12
+		},
+		{
+			"max": 1,
+			"model": "fuel_depot",
+			"type": "Ice Cream Store"
+			"mod": 13
+		},
+		{
+			"max": 1,
+			"model": "tower",
+			"type": "Leather Store"
+			"mod": 14
+		},
+		{
+			"max": 1,
+			"model": "fuel_depot",
+			"type": "Manure Store"
+			"mod": 15
+		},
+		{
+			"max": 1,
+			"model": "fuel_depot",
+			"type": "Milk Store"
+			"mod": 16
+		},
+		{
+			"max": 7,
+			"model": "depot",
+			"type": "Barn"
+			"mod": 17
+		},
+		{
+			"max": 1,
+			"model": "storage",
+			"type": "Mega Barn"
+			"mod": 18
+		},
+		{
+			"max": 2,
+			"model": "factory",
+			"type": "Processing Plant"
+			"mod": 19
+		},
+		{
+			"max": 1,
+			"model": "altar",
+			"type": "Habitation"
+			"mod": 20
+		},
+		{
+			"max": 1,
+			"model": "factory_2",
+			"type": "Cheese Lab"
+			"mod": 21
+		},
+		{
+			"max": 1,
+			"model": "factory_2",
+			"type": "Sausage Lab"
+			"mod": 22
+		},
+		{
+			"max": 3,
+			"model": "biosphere",
+			"type": "Pasture Dome"
+			"mod": 23
+		},
+		{
+			"max": 1,
+			"model": "command_center_3",
+			"type": "Law Office"
+			"mod": 24
+		}
+	]

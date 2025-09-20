@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw7xbni6qjr8n"]
+
+[ext_resource type="PackedScene" uid="uid://1lq505jo8c1p" path="res://Assets/Models/square_grass.gltf" id="1_vtif5"]
+[ext_resource type="Material" uid="uid://br132tbsm6nlx" path="res://Materials/dirt-green.tres" id="2_4i233"]
+[ext_resource type="Material" path="res://Materials/grass.tres" id="3_86asg"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="4_3lmfe"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vtif5"]
+points = PackedVector3Array(-2.13, 0, -2.13, -2.13, 1, -2.13, 2.13, 0, -2.13, -2.13, 0, 2.13, -2.13, 1, 2.13, 2.13, 1, -2.13, 2.13, 0, 2.13, 2.13, 1, 2.13)
+
+[node name="square_grass" groups=["Board"] instance=ExtResource("1_vtif5")]
+
+[node name="StaticMesh" parent="." index="0"]
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_4i233")
+surface_material_override/1 = ExtResource("3_86asg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticMesh" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticMesh/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_vtif5")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="1"]
+script = ExtResource("4_3lmfe")
+broadcast = 2
+refresh_rate = 20.0
+node_path = NodePath("..")
+properties = PackedStringArray("position", "basis")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = ExtResource("4_3lmfe")

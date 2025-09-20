@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://chrorxt83cckp"]
+
+[ext_resource type="Script" uid="uid://b0axah0gtq08o" path="res://Menus/create_account_menu.gd" id="1_flikr"]
+[ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="1_xcsf6"]
+[ext_resource type="Texture2D" uid="uid://bd1dudyjs6m5" path="res://Assets/Textures/crab_nasa.jpg" id="2_nswdh"]
+[ext_resource type="FontFile" uid="uid://c465n5rovhtmk" path="res://Fonts/Zebulon.otf" id="3_q0wqh"]
+[ext_resource type="PackedScene" uid="uid://dx00vd8c6387g" path="res://GD-SyncTemplates/Accounts/create_account.tscn" id="4_77q8d"]
+[ext_resource type="PackedScene" uid="uid://boir4qp8fpp3b" path="res://Menus/Help.tscn" id="6_drn5k"]
+[ext_resource type="AudioStream" uid="uid://dukfg3jsicjo6" path="res://Assets/Sounds/Music/call_from_out_there.ogg" id="7_drn5k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rpgx0"]
+texture = ExtResource("2_nswdh")
+
+[node name="CreateAccountMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xcsf6")
+script = ExtResource("1_flikr")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xcsf6")
+theme_override_styles/panel = SubResource("StyleBoxTexture_rpgx0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_q0wqh")
+theme_override_font_sizes/font_size = 64
+text = "SPACE COLONY CHEESES II"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Create Account"
+horizontal_alignment = 1
+
+[node name="CreateAccount" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource("4_77q8d")]
+layout_mode = 2
+
+[node name="Help" parent="." instance=ExtResource("6_drn5k")]
+visible = false
+layout_mode = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_drn5k")
+bus = &"Music"
+parameters/looping = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

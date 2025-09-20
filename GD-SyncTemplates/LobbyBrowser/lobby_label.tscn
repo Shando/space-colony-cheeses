@@ -1,0 +1,158 @@
+[gd_scene load_steps=7 format=3 uid="uid://cva15bed5a0cc"]
+
+[ext_resource type="Script" uid="uid://c1077fyyi2s2i" path="res://GD-SyncTemplates/LobbyBrowser/lobby_label.gd" id="1_13l6x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wh0ky"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0231, 0.1617, 0.20019999, 1)
+border_color = Color(0.01965, 0.13755, 0.17029999, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xc4bn"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0202125, 0.1414875, 0.175175, 1)
+border_color = Color(0.01965, 0.13755, 0.17029999, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3641"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 1, 1, 0.11)
+border_color = Color(1, 1, 1, 0.05)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5odb"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.026999999, 0.189, 0.23399998, 1)
+border_color = Color(0.021, 0.147, 0.182, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6hqv"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0231, 0.1617, 0.20019999, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.15, 0.55, 0.82, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+anti_aliasing = false
+
+[node name="LobbyLabel" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_13l6x")
+
+[node name="NameBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LobbyName" type="Label" parent="NameBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lobby Name"
+clip_text = true
+
+[node name="PlayerCountBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerCount" type="Label" parent="PlayerCountBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Player Count"
+clip_text = true
+
+[node name="GamemodeBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Gamemode" type="Label" parent="GamemodeBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+
+[node name="PasswordBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PasswordProtected" type="Label" parent="PasswordBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Password Protected"
+clip_text = true
+
+[node name="OpenBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Open" type="Label" parent="OpenBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Open"
+clip_text = true
+
+[node name="JoinBox" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="JoinButton" type="Button" parent="JoinBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wh0ky")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xc4bn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3641")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_b5odb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_c6hqv")
+text = "JOIN"
+
+[connection signal="pressed" from="JoinBox/JoinButton" to="." method="_on_join_button_pressed"]

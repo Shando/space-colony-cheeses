@@ -1,0 +1,189 @@
+{
+   "accessors" : [
+      {
+         "bufferView" : 0,
+         "byteOffset" : 0,
+         "componentType" : 5123,
+         "count" : 36,
+         "max" : [ 7 ],
+         "min" : [ 0 ],
+         "type" : "SCALAR"
+      },
+      {
+         "bufferView" : 1,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 8,
+         "max" : [ 2.130000114440918, 1, 2.130000114440918 ],
+         "min" : [ -2.130000114440918, 0, -2.130000114440918 ],
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 8,
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 3,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 8,
+         "max" : [ 1, 1 ],
+         "min" : [ 0, 0 ],
+         "type" : "VEC2"
+      },
+      {
+         "bufferView" : 4,
+         "byteOffset" : 0,
+         "componentType" : 5123,
+         "count" : 2541,
+         "max" : [ 845 ],
+         "min" : [ 0 ],
+         "type" : "SCALAR"
+      },
+      {
+         "bufferView" : 5,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 846,
+         "max" : [ 2.130115032196045, 2.823785066604614, 2.12992000579834 ],
+         "min" : [ -2.130115032196045, 0.7762150168418884, -2.12992000579834 ],
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 6,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 846,
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 7,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 846,
+         "max" : [ 1, 1 ],
+         "min" : [ 0, 0 ],
+         "type" : "VEC2"
+      }
+   ],
+   "asset" : {
+      "extras" : {
+         "date" : "Tue Jan 03 08:42:23 2023",
+         "website" : "http://www.unwrap3d.com"
+      },
+      "generator" : "Ultimate Unwrap3D Pro (x64) v3.50.61",
+      "version" : "2.0"
+   },
+   "bufferViews" : [
+      {
+         "buffer" : 0,
+         "byteLength" : 72,
+         "byteOffset" : 0
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 96,
+         "byteOffset" : 72,
+         "byteStride" : 12
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 96,
+         "byteOffset" : 168,
+         "byteStride" : 12
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 64,
+         "byteOffset" : 264,
+         "byteStride" : 8
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 5082,
+         "byteOffset" : 328
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 10152,
+         "byteOffset" : 5412,
+         "byteStride" : 12
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 10152,
+         "byteOffset" : 15564,
+         "byteStride" : 12
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 6768,
+         "byteOffset" : 25716,
+         "byteStride" : 8
+      }
+   ],
+   "buffers" : [
+      {
+         "byteLength" : 32484,
+         "uri" : "square_grass0.bin"
+      }
+   ],
+   "materials" : [
+      {
+         "name" : "matPBRDryDirt",
+         "pbrMetallicRoughness" : {
+            "baseColorFactor" : [ 1, 1, 1, 1 ],
+            "metallicFactor" : 0
+         }
+      },
+      {
+         "name" : "matGrass",
+         "pbrMetallicRoughness" : {
+            "baseColorFactor" : [ 1, 1, 1, 1 ],
+            "metallicFactor" : 0
+         }
+      }
+   ],
+   "meshes" : [
+      {
+         "name" : "StaticMesh",
+         "primitives" : [
+            {
+               "attributes" : {
+                  "NORMAL" : 2,
+                  "POSITION" : 1,
+                  "TEXCOORD_0" : 3
+               },
+               "indices" : 0,
+               "material" : 0,
+               "mode" : 4
+            },
+            {
+               "attributes" : {
+                  "NORMAL" : 6,
+                  "POSITION" : 5,
+                  "TEXCOORD_0" : 7
+               },
+               "indices" : 4,
+               "material" : 1,
+               "mode" : 4
+            }
+         ]
+      }
+   ],
+   "nodes" : [
+      {
+         "mesh" : 0,
+         "name" : "StaticMesh"
+      }
+   ],
+   "scene" : 0,
+   "scenes" : [
+      {
+         "nodes" : [ 0 ]
+      }
+   ]
+}

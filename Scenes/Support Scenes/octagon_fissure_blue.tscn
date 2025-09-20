@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://cugbdcqgnffbp"]
+
+[ext_resource type="PackedScene" uid="uid://beswcv7d501ra" path="res://Assets/Models/octagon_fissure.gltf" id="1_f3gng"]
+[ext_resource type="Material" uid="uid://b5qubg5ysnoqb" path="res://Materials/dirt-blue.tres" id="2_s22lk"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="3_r6247"]
+[ext_resource type="Material" uid="uid://rt6s38g6bgor" path="res://Particles/smoke.tres" id="4_tn3pp"]
+[ext_resource type="Material" uid="uid://d2e28144lrkys" path="res://Particles/steam_2.tres" id="5_ratqw"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f3gng"]
+points = PackedVector3Array(-2.10496, 0, -5.08134, -5.08134, 0, -2.10496, -2.10496, 1, -5.08134, 2.10396, 0, -5.08134, -5.08134, 0, 2.10396, -5.08134, 1, -2.10496, 2.10396, 1, -5.08134, 5.08134, 0, -2.10496, -5.08134, 1, 2.10396, -2.10496, 0, 5.08134, 5.08134, 1, -2.10496, 5.08134, 0, 2.10396, -2.10496, 1, 5.08134, 2.10396, 0, 5.08134, 5.08134, 1, 2.10396, 2.10396, 1, 5.08134)
+
+[sub_resource type="QuadMesh" id="QuadMesh_st8t8"]
+material = ExtResource("5_ratqw")
+
+[node name="octagon_fissure" groups=["Board"] instance=ExtResource("1_f3gng")]
+
+[node name="StaticMesh" parent="." index="0"]
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_s22lk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticMesh" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticMesh/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_f3gng")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="1"]
+amount = 45
+process_material = ExtResource("4_tn3pp")
+draw_pass_1 = SubResource("QuadMesh_st8t8")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="2"]
+script = ExtResource("3_r6247")
+broadcast = 2
+refresh_rate = 20
+node_path = NodePath("..")
+properties = PackedStringArray("position", "basis")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = "uid://c0a3hvm74q10i"

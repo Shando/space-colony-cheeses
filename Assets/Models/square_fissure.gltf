@@ -1,0 +1,189 @@
+{
+   "accessors" : [
+      {
+         "bufferView" : 0,
+         "byteOffset" : 0,
+         "componentType" : 5123,
+         "count" : 36,
+         "max" : [ 13 ],
+         "min" : [ 0 ],
+         "type" : "SCALAR"
+      },
+      {
+         "bufferView" : 1,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 14,
+         "max" : [ 2.130000114440918, 0.009999990463256836, 2.130000114440918 ],
+         "min" : [ -2.130000114440918, 0, -2.129998922348023 ],
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 14,
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 3,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 14,
+         "max" : [ 1, 1 ],
+         "min" : [ 0, 0 ],
+         "type" : "VEC2"
+      },
+      {
+         "bufferView" : 4,
+         "byteOffset" : 0,
+         "componentType" : 5123,
+         "count" : 6558,
+         "max" : [ 2179 ],
+         "min" : [ 0 ],
+         "type" : "SCALAR"
+      },
+      {
+         "bufferView" : 5,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 2180,
+         "max" : [ 2.130000114440918, 1.004999995231628, 2.130000114440918 ],
+         "min" : [ -2.130000114440918, 0.004999995231628418, -2.130000114440918 ],
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 6,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 2180,
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 7,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 2180,
+         "max" : [ 325.7891845703125, 318.0852661132813 ],
+         "min" : [ -316.7445678710938, -336.2129516601563 ],
+         "type" : "VEC2"
+      }
+   ],
+   "asset" : {
+      "extras" : {
+         "date" : "Tue Jan 03 08:42:09 2023",
+         "website" : "http://www.unwrap3d.com"
+      },
+      "generator" : "Ultimate Unwrap3D Pro (x64) v3.50.61",
+      "version" : "2.0"
+   },
+   "bufferViews" : [
+      {
+         "buffer" : 0,
+         "byteLength" : 72,
+         "byteOffset" : 0
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 168,
+         "byteOffset" : 72,
+         "byteStride" : 12
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 168,
+         "byteOffset" : 240,
+         "byteStride" : 12
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 112,
+         "byteOffset" : 408,
+         "byteStride" : 8
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 13116,
+         "byteOffset" : 520
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 26160,
+         "byteOffset" : 13636,
+         "byteStride" : 12
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 26160,
+         "byteOffset" : 39796,
+         "byteStride" : 12
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 17440,
+         "byteOffset" : 65956,
+         "byteStride" : 8
+      }
+   ],
+   "buffers" : [
+      {
+         "byteLength" : 83396,
+         "uri" : "square_fissure0.bin"
+      }
+   ],
+   "materials" : [
+      {
+         "name" : "matPBRDryDirt0",
+         "pbrMetallicRoughness" : {
+            "baseColorFactor" : [ 1, 1, 1, 1 ],
+            "metallicFactor" : 0
+         }
+      },
+      {
+         "name" : "matPBRDryDirt",
+         "pbrMetallicRoughness" : {
+            "baseColorFactor" : [ 1, 1, 1, 1 ],
+            "metallicFactor" : 0
+         }
+      }
+   ],
+   "meshes" : [
+      {
+         "name" : "StaticMesh",
+         "primitives" : [
+            {
+               "attributes" : {
+                  "NORMAL" : 2,
+                  "POSITION" : 1,
+                  "TEXCOORD_0" : 3
+               },
+               "indices" : 0,
+               "material" : 0,
+               "mode" : 4
+            },
+            {
+               "attributes" : {
+                  "NORMAL" : 6,
+                  "POSITION" : 5,
+                  "TEXCOORD_0" : 7
+               },
+               "indices" : 4,
+               "material" : 1,
+               "mode" : 4
+            }
+         ]
+      }
+   ],
+   "nodes" : [
+      {
+         "mesh" : 0,
+         "name" : "StaticMesh"
+      }
+   ],
+   "scene" : 0,
+   "scenes" : [
+      {
+         "nodes" : [ 0 ]
+      }
+   ]
+}

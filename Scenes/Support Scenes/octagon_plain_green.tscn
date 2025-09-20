@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://di1p5c7kxi6ys"]
+
+[ext_resource type="PackedScene" uid="uid://ddp0ovfof2uat" path="res://Assets/Models/octagon_plain.gltf" id="1_eubl0"]
+[ext_resource type="Material" uid="uid://br132tbsm6nlx" path="res://Materials/dirt-green.tres" id="2_1woyk"]
+[ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="3_35ku2"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eubl0"]
+points = PackedVector3Array(-2.10496, 0, -5.08134, -5.08134, 0, -2.10496, -2.10496, 1, -5.08134, 2.10396, 0, -5.08134, -5.08134, 0, 2.10396, -5.08134, 1, -2.10496, 2.10396, 1, -5.08134, 5.08134, 0, -2.10496, -5.08134, 1, 2.10396, -2.10496, 0, 5.08134, 5.08134, 1, -2.10496, 5.08134, 0, 2.10396, -2.10496, 1, 5.08134, 2.10396, 0, 5.08134, 5.08134, 1, 2.10396, 2.10396, 1, 5.08134)
+
+[node name="octagon_plain" groups=["Board"] instance=ExtResource("1_eubl0")]
+
+[node name="StaticMesh" parent="." index="0"]
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_1woyk")
+surface_material_override/1 = ExtResource("2_1woyk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticMesh" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticMesh/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_eubl0")
+
+[node name="PropertySynchronizer" type="Node" parent="." index="1"]
+script = ExtResource("3_35ku2")
+broadcast = 2
+refresh_rate = 20.0
+node_path = NodePath("..")
+properties = PackedStringArray("position", "basis")
+interpolated = false
+interpolation_speed = 1.0
+metadata/_custom_type_script = ExtResource("3_35ku2")

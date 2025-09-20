@@ -1,0 +1,781 @@
+[gd_scene load_steps=25 format=3 uid="uid://boir4qp8fpp3b"]
+
+[ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="1_msn5b"]
+[ext_resource type="Texture2D" uid="uid://bd1dudyjs6m5" path="res://Assets/Textures/crab_nasa.jpg" id="2_ao2vq"]
+[ext_resource type="FontFile" uid="uid://c465n5rovhtmk" path="res://Fonts/Zebulon.otf" id="3_d0kd8"]
+[ext_resource type="Script" uid="uid://b2pdjw3ntwvum" path="res://Menus/Help.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://cmc6kxf1rf13q" path="res://Assets/Textures/Models/crystal_farm_yellow_black.png" id="5_5ifgo"]
+[ext_resource type="FontFile" uid="uid://b1a722n3fy2px" path="res://Fonts/NotoSans-Regular.otf" id="5_5vlgg"]
+[ext_resource type="Texture2D" uid="uid://rid1a4cf3ret" path="res://Assets/Textures/Models/crystal_powerplant_yellow_black.png" id="6_y0k4i"]
+[ext_resource type="Texture2D" uid="uid://c6g4lptrcrpgy" path="res://Assets/Textures/Models/power_plant_yellow_black.png" id="7_aewot"]
+[ext_resource type="Texture2D" uid="uid://dsrtn6fx1qsvi" path="res://Assets/Textures/Models/rocket_silo_yellow_black.png" id="8_ak8cw"]
+[ext_resource type="Texture2D" uid="uid://bhgnpkdej7416" path="res://Assets/Textures/Models/fuel_depot_yellow_black.png" id="9_3124t"]
+[ext_resource type="Texture2D" uid="uid://vbrgvbc2qkgs" path="res://Assets/Textures/Models/tower_yellow_black.png" id="10_8oajh"]
+[ext_resource type="Texture2D" uid="uid://cmfnsqpnwsibn" path="res://Assets/Textures/Models/depot_yellow_black.png" id="11_kymbp"]
+[ext_resource type="Texture2D" uid="uid://dyum7m58pkett" path="res://Assets/Textures/Models/storage_yellow_black.png" id="12_0cw8n"]
+[ext_resource type="Texture2D" uid="uid://cpaefqpitir2h" path="res://Assets/Textures/Models/factory_yellow_black.png" id="13_siwld"]
+[ext_resource type="Texture2D" uid="uid://pane13f1bdwn" path="res://Assets/Textures/Models/biosphere_yellow_black.png" id="14_dkh3c"]
+[ext_resource type="Texture2D" uid="uid://bkn8qxby0qx50" path="res://Assets/Textures/Models/altar_2_yellow_black.png" id="15_5vlgg"]
+[ext_resource type="Texture2D" uid="uid://c6kmhkpqfloon" path="res://Assets/Textures/Models/altar_yellow_black.png" id="16_5fjcd"]
+[ext_resource type="Texture2D" uid="uid://umm8cw30hwkq" path="res://Assets/Textures/Models/construction_yellow_black.png" id="17_dkh3c"]
+[ext_resource type="Texture2D" uid="uid://dvxdha4qkjw1u" path="res://Assets/Textures/Models/command_center_1_yellow_black.png" id="18_5vlgg"]
+[ext_resource type="Texture2D" uid="uid://b0scgxavkchaw" path="res://Assets/Textures/Models/factory_2_yellow_black.png" id="19_5fjcd"]
+[ext_resource type="Texture2D" uid="uid://yq4c1ypduo80" path="res://Assets/Textures/Models/command_center_3_yellow_black.png" id="20_2fbh6"]
+[ext_resource type="Texture2D" uid="uid://b20q1dggp41ay" path="res://Assets/Textures/Models/portal_yellow_black.png" id="21_2y568"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7rmi"]
+texture = ExtResource("2_ao2vq")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfy4c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_msn5b")
+script = ExtResource("4")
+
+[node name="TextToSpeech" type="AudioStreamPlayer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x7rmi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_d0kd8")
+theme_override_font_sizes/font_size = 64
+text = "SPACE COLONY CHEESES II"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bfy4c")
+
+[node name="HBoxContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "CLICK HERE TO READ ALOUD"
+
+[node name="TabContainer" type="TabContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+current_tab = 5
+
+[node name="Overview" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Overview"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Welcome to Space Colony Cheeses II - The Computer Game[/font_size][/b]
+
+The colonisation of space is going smoothly. Spaceships fly on schedule from colony to colony, bearing the imports and exports of dozens of planets. But most of the trade is centred on necessities. There's no way to send a tasteful Christmas gift of assorted cheeses and beef sausages to a loved one on another planet. You've been assigned to change all that.
+
+You are in charge of colonizing a newly discovered world, Bos IV. Bos IV is similar in most ways to Bos III (see the [b]Space Colony Cheeses[/b] board game) but you [b][color=red]cannot[/color][/b] build Space Ports here (the natives won’t allow it!) and it has less sunlight, so you [b][color=red]cannot[/color][/b] use Solar Power! Instead the boffins have perfected [b]Portals[/b] for travelling to Bos III (which does have Space Ports) and they have also discovered that Bos IV has an almost unlimited amount of [b]Yapthalene Crystals[/b] (which come in four funky colours - Green, Orange, Sky Blue & Yellow) that can be grown (and mined) in special areas called [b]Crystal Mines[/b]. Your task is to build a thriving, profitable, dairy colony using these crystals for power, as well as geothermal energy from certain areas of the planet (anywhere you can see steam rising from the ground is where you can place your [b]Geothermal Powerplants[/b]). You must choose when, where and how to expand. You'll have to balance the need for money-making against the need for energy production. If you can afford it, you may want to expand into other dairy products, increase your storage capacity, or just harass the competition with endless lawsuits. The choices, and the responsibility, are yours.
+
+Finally, last year saw one of the biggest NanoTech breakthroughs in history - the creation of a special breed of Cow (the Nano-Cow). These Nano-Cows are invisible to the human eye, but can be milked and slaughtered using special machinery. To populate your pastures with these amazing creatures, you firstly build a [b]Pasture Dome[/b], then you release the special Nano-Fluid onto the crystals and, in a few short minutes, there will literally be billions of Nano-Cows living and breeding in your [b]Pasture Dome[/b] and spreading to your [b]Barns[/b], with nothing for you to do but ensure the modules are maintained and, of course, reap the rewards.
+
+[b]Space Colony Cheeses II[/b] is a light-hearted, non-violent game for 2-4 Players, based on [b]Space Colony Cheeses[/b], a board game by [b]The Mad Game Designer (aka Michael Fischer)[/b] - http://www.cke1st.com/m_games1.htm."
+
+[node name="Introduction" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Introduction"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]I. Introduction[/font_size][/b]
+
+The ultimate goal of the game is to make money ($). You do this by adding modules to your colony. Some modules generate $, and some [color=Red]do not[/color], but all can be useful to the colony. Each Player begins the game with $100.
+
+You roll a dice to see who goes first. Each colony MUST begin with a [b]Start-Up[/b] module. A colony can [b]only[/b] be started in one of the four (4) coloured Quadrants of the Board. Only [b]one[/b] Player can start in any one (1) Quadrant and a Player may [b][color=red]not[/color][/b] start multiple colonies.
+
+[b][font_size=24]II. The Map[/font_size][/b]
+
+This is unlike most maps you will have seen. There are two kinds of grid units, [b]squares[/b] and [b]octagons[/b]. A square has only four neighbours, while an octagon has eight. This can be important when arranging your modules.
+
+The map has two kinds of features, [b]Geothermal Steam[/b] and [b]Lush Pastures[/b]. [b]Geothermal Steam[/b] can be found anywhere that you see steam rising from the ground and are the [b]only[/b] places that you can build [b]Geothermal Plants[/b]. [b]Lush Pastures[/b] have grass growing on them, and give a bonus to any [b]Barns[/b] that are built on them.
+
+[b][font_size=24]III. Building Colonies[/font_size][/b]
+
+Bos IV is an anomaly. Earth-type plants grow well here, but the atmosphere does [b][color=red]not[/color][/b] retain oxygen. Thus, there is plenty of grassland for your Nano-Cows to munch on, but everything must be enclosed in modular domes with artificial atmospheres.
+
+All of these modules must be connected to each other. Only the [b]Start-Up[/b] module can stand alone. Each module requires 1 energy unit per turn. Modules that are energy-short [b][color=red]cannot[/color][/b] function and produce nothing. You can, however, build a module with no energy source, and add one later.
+
+Food is not a problem for your colony, since that is exactly what you are producing. As your colony makes commodities, they are kept track of on the scoreboard, as is your current bank balance."
+
+[node name="Game Sequence" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Game Sequence"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]IV. Game Sequence[/font_size][/b]
+
+1. Colonies with a [b]Construction module[/b] can move any one of their own modules currently placed on the map. Such a move will cost half of the original cost of the module.
+
+2. Each colony can add up to a maximum of 3 new modules, if it has enough $ in the bank and space on the map.
+
+3. Each colony rolls a dice. If it comes up a 1, then a new disease has started in the herds of that colony (yes, Nano-Cows can get sick as well). One of the [b]Barn[/b] (or [b]Megabarn[/b] modules of that colony [b]must[/b] now be marked as [b]sick[/b]. That [b]Barn[/b] (or [b]Megabarn[/b] is now unable to produce anything until the disease is cured. A colony [b][color=red]cannot[/color][/b] have more than 4 diseases at once, so any others that crop up are ignored. If the colony has 4 diseases at one time, then it [b][color=red]cannot[/color][/b] sell anything except [b]Leather[/b] and [b]Manure[/b].
+
+4. Each colony calculates its energy production and then subtracts the energy needs of all the other modules. If there is [b][color=red]not[/color][/b] enough energy to go around, modules [b]must[/b] be marked as [b]offline[/b] (which denotes an energy shortage) until there is enough energy available to power them again (i.e. marked as [b]online[/b]). An energy-producing module cannot be [b]offline[/b], and any surplus energy is lost.
+
+5. Each colony now calculates its commodity production from each [b]Barn[/b] (or [b]Megabarn[/b] next to a [b]Processing Plant[/b], and allocates it to the eight available commodities - [b]Milk[/b], [b]Cream[/b], [b]Butter[/b], [b]Ice Cream[/b], [b]Cheese[/b], [b]Beef[/b], [b]Leather[/b] and/or [b]Manure[/b]. A colony [b][color=red]cannot[/color][/b] make more of a particular commodity than it has storage for (the maximum storage capacity of any product is 10). If there is [b][color=red]no[/color][/b] storage space available for a commodity, then it [b][color=red]cannot[/color][/b] be made.
+
+6. Each colony now rolls two dice, and a [b]random event[/b] is generated. The colony [b]must[/b] follow all instructions for the [b]random event[/b]. Note that should the colony be allowed to change a commodity price, then the change will be applied in Step 8. Also note that commodity prices can never fall below 0.
+
+7. Each colony that has a functioning [b]Portal[/b], a functioning [b]Store[/b], and at least one stored commodity of [b]Cheese[/b] and one of [b]Beef[/b], can now sell [b]gift boxes[/b] (see [b]Store[/b]). If a [b]gift box[/b] is sold, then the stored amounts of [b]Cheese[/b] and [b]Beef[/b] will be reduced accordingly.
+
+8. A dice is now rolled for each commodity to set the price for the current turn. Each colony with a functional [b]Portal[/b] can now sell as many of that commodity as they want, adjusting the price by the results of their [b]random event[/b] roll as needed.
+
+9. Now, all income from [b]Start-Ups[/b], [b]Cheese Labs[/b], and [b]Sausage Labs[/b] are added to the bank balance of the colony, and [b]Law Offices[/b] file lawsuits if required.
+
+10. A dice is now rolled for each diseased [b]Barn[/b] or [b]Megabarn[/b]. If it comes up 5 or 6, then the disease has been [b]cured[/b]. Note that two dice rolls are allowed if the colony has a [b]Veterinary[/b] module. If the disease is cured, [b]Barn[/b] (or [b]MegaBarn[/b]) is no longer marked as [b]sick[/b].
+
+11. Finally, all stored commodities, except for [b]Leather[/b] and [b]Manure[/b], are reset to zero."
+
+[node name="Modules I" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "   V. Colony Modules (Part 1)"
+scroll_active = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("5_5ifgo")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Start-Up Modules aka Crystal Mines[/font_size][/b]
+[b](# Allowed = 1 - Cost = $20 - Cash Produced = $2 - Energy Produced = 2)[/b]
+These [b]must[/b] be the first modules built. However, they are quite expensive as they generate their own energy as well as a small amount of $."
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("6_y0k4i")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Crystal Powerplant Modules[/font_size]
+(# Allowed = 3 - Cost = $5 - Energy Produced = 3)[/b]
+These are the least expensive, and least powerful, energy source.
+"
+
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("7_aewot")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Geothermal Powerplant Modules[/font_size]
+(# Allowed = 4 - Cost = $10 - Energy Produced = 6)[/b]
+These produce more energy than the [b]Crystal Powerplant[/b], but can only be built on [b]Geothermal Steam[/b] grid units.
+"
+
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer4"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer4/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("8_ak8cw")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Hub Modules[/font_size]
+(# Allowed = 4 - Cost = $5)[/b]
+These are special connectors. Any module adjacent to a [b]Hub[/b] is considered adjacent to any other modules that are also adjacent to the [b]Hub[/b].
+[b]NB: Hub[/b] modules use [b][color=red]no[/color][/b] energy."
+
+[node name="Modules II" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "   V. Colony Modules (Part 2)"
+scroll_active = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("9_3124t")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Storage Modules[/font_size]
+(Butter, Cream, Ice Cream, Manure & Milk - # Allowed = 1 of each - Cost = $5 - Energy Required = 1)[/b]
+These can store up to 10 units of [b]Butter[/b], [b]Cream[/b], [b]Ice Cream[/b], [b]Manure[/b] or [b]Milk[/b], which can be sold, along with the other commodities, at a [b]Portal[/b]. All commodity [b]Storage[/b] modules [b]must[/b] be adjacent to a [b]Processing Plant[/b].
+[b]NB:[/b] at the end of each turn, any remaining stored commodities (except [b]Leather[/b] and [b]Manure[/b]) spoil and [b]must[/b] be discarded with the relevant inventory dropping to 0."
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("10_8oajh")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Storage Modules[/font_size]
+(Beef, Cheese & Leather - # Allowed = 1 of each - Cost = $5 - Energy Required = 1)[/b]
+These can store up to 10 units of [b]Beef[/b], [b]Cheese[/b] or [b]Leather[/b], which can be sold, along with the other commodities, at a [b]Portal[/b]. All commodity [b]Storage[/b] modules must be adjacent to a [b]Processing Plant[/b].
+[b]NB:[/b] at the end of each turn, any remaining stored commodities (except [b]Leather[/b] and [b]Manure[/b]) spoil and [b]must[/b] be discarded with the relevant inventory dropping to 0."
+
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("11_kymbp")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Barn Modules[/font_size]
+(# Allowed = 7 - Cost = $10 - Energy Required = 1 - Output = 5)[/b]
+These support one herd of Nano-Cows, including all required feeding and milking equipment. They produce 5 commodity units per turn, or 7 if built on a [b]Lush Pasture[/b] grid unit.
+[b]NB: Barns must[/b] be adjacent to a [b]Processing Plant[/b]."
+
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer4"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer4/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("12_0cw8n")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Mega-Barn Modules[/font_size]
+(# Allowed = 1 - Cost = $20 - Energy Required = 1 - Output = 10)[/b]
+These count as two [b]Barn[/b] modules for commodity output, and as one [b]Barn[/b] module for energy usage."
+
+[node name="Modules III" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "   V. Colony Modules (Part 3)"
+scroll_active = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("13_siwld")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Processing Plant Modules[/font_size]
+(# Allowed = 2 - Cost = $10 - Energy Required = 2)[/b]
+These turn the output from the herd into [b]Beef[/b], [b]Butter[/b], [b]Cheese[/b], [b]Cream[/b], [b]Ice Cream[/b], [b]Leather[/b], [b]Manure[/b] and/or [b]Milk[/b]. There is no limit on how many units of each commodity a [b]Processing Plant[/b] can make, except that there must be room in the [b]Storage[/b] modules for everything.
+[b]NB:[/b] Anything that will [b][color=red]not[/color][/b] fit in a [b]Storage[/b] module is lost and a [b]Processing Plant[/b] requires 2 units of energy per turn, [b][color=red]not[/color][/b] the usual 1."
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("14_dkh3c")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Pasture Dome Modules[/font_size]
+(# Allowed = 3 - Cost = $5 -  Energy Required = 1)[/b]
+These are enclosed grazing areas, which must be adjacent to a [b]Barn[/b] or [b]Megabarn[/b]. Bad things can happen if there is [b][color=red]not[/color][/b] at least one [b]Pasture Dome[/b] for each 3 [b]Barn's[/b] worth of Nano-Cows (count one [b]Megabarn[/b] as two [b]Barns[/b])."
+
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("15_5vlgg")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Catalog Store Modules[/font_size]
+(# Allowed = 1 - Cost = $10 - Cash Produced = $10 - Energy Required = 1)[/b]
+These allow the selling of tasteful gift boxes of assorted Cheeses, Beef Sausages, and flavourless crackers, usually at higher prices than the [b]Cheese[/b] and [b]Beef[/b] alone would fetch. A [b]Catalog Store [color=red]cannot[/color][/b] function unless there is a working [b]Portal[/b] and at least one stored unit each of [b]Cheese[/b] and [b]Beef[/b]. Gift boxes are made of one [b]Cheese[/b] and one [b]Beef[/b] unit each, and usually sell for $10."
+
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer4"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer4/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("16_5fjcd")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Habitation Modules[/font_size]
+(# Allowed = 1 - Cost = $5 - Energy Required = 1)[/b]
+These are living spaces for the workers of the colony, and are required for the colony to exceed 12 modules. In other words, the 13th module [b]must[/b] be a [b]Habitation[/b] module. Should this module be deprived of energy, then [b][color=red]no[/color][/b] more modules may be placed until it is functional again."
+
+[node name="Modules IV" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "   V. Colony Modules (Part 4)"
+scroll_active = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("17_dkh3c")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Construction Modules[/font_size]
+(# Allowed = 1 - Cost = $10 - Energy Required = 1)[/b]
+These reduce the cost of new module construction by $1 per module, and allow the movement of one existing module, per turn, to another location. However, this movement is [b][color=red]not[/color][/b] free, and costs half of the original purchase price (fractions will be dropped)."
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("18_5vlgg")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Veterinary Modules[/font_size]
+(# Allowed = 1 - Cost = $10 - Energy Required = 1)[/b]
+These are packed full of the best Nano-Veterinarians in the Galaxy and give the colony a second chance to overcome diseases."
+
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("19_5fjcd")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Laboratory Modules[/font_size]
+(Cheese & Sausage - # Allowed = 1 of each - Cost = $10 - Cash Produced = $4 - Energy Required = 1)[/b]
+These generate $4 each turn through research into new flavours of Cheeses or Sausages, and will generate $ whether there is a functional [b]Portal[/b] or not."
+
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer4"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer4/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("20_2fbh6")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Law Office Modules[/font_size]
+(# Allowed = 1 - Cost = $15 - Energy Required = 1)[/b]
+These are full of greedy corporate lawyers who are eager to sue the udders off the competition. Each turn, a colony can choose to file a suit against another colony for infringement of grazing rights, a strawberry tort, or whatever else they can think of. All lawsuits are decided by the roll of a dice. If it comes up 1-4, multiply by 10, and that's what the colony receives in reparations. If it's a 5, the case was dismissed, and a 6 means the court found for the other colony, who [b]must[/b] be paid $25 in damages.
+[b]NB:[/b] A colony with less than $50 in the bank [b][color=red]cannot[/color][/b] be sued."
+
+[node name="Modules V" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules V"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "   V. Colony Modules (Part 5)"
+scroll_active = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("21_2y568")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]Portal Modules[/font_size]
+(# Allowed = 1 - Cost = $10 - Energy Required = 1)[/b]
+These are required in order to trade with the rest of the Galaxy, via Bos III. Prices of the eight commodities are different each turn and for each colony. Each price is determined by a roll of the dice. The price of [b]Leather[/b] can never be higher than 3, and the price of [b]Manure[/b] is always 1.
+[b]NB:[/b] Random Events can override these limits."
+
+[node name="How to Win" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/How to Win"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]VI. Winning the Game[/font_size][/b]
+
+The colony with the [b]most[/b] money at the end of 15 turns is the winner.
+
+If it is a tie, then you can vote to go to [b]sudden death[/b], where you have 3 extra rounds to try to beat your opposition.
+
+This can be repeated ad-infinitum, if you so desire, but has to be agreed to by [b]all[/b] Players after every extra 3 rounds.
+
+
+
+
+
+
+[b][font_size=24]G O O D    L U C K !!!![/font_size][/b]"
+scroll_active = false
+
+[node name="Keyboard and Mouse" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 9
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Keyboard and Mouse"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]KEYBOARD and MOUSE[/font_size][/b]
+
+
+
+[b]F1[/b] displays this [b]Help[/b] ([b]F1[/b] again to close).
+
+[b]F2[/b] displays the [b]Options[/b] screen ([b]F2[/b] again to close).
+
+[b]F3[/b] stops any current speech.
+
+[b]W, A, S, D[/b] move the camera [b]Forwards[/b], [b]Left[/b], [b]Backwards[/b] & [b]Right[/b].
+[b]DOWN Arrow looks down[/b].
+[b]UP Arrow looks up[/b].
+
+The [b]Mouse Wheel[/b] increases and decreases the speed of movement of the camera.
+
+Pressing the [b]RIGHT Mouse button[/b] whilst [b]moving the mouse[/b] rotates the camera around the up axis.
+
+"
+scroll_active = false
+
+[node name="About and Credits" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+metadata/_tab_index = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/About and Credits"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_5vlgg")
+bbcode_enabled = true
+text = "[b][font_size=24]CREDITS[/font_size][/b]
+
+[b]Space Colony Cheeses II[/b] is based on [b]Space Colony Cheeses[/b], a board game by [b]The Mad Game Designer (aka Michael Fischer)[/b] - (http://www.cke1st.com/m_games1.htm)
+
+The [b]Models[/b] for the buildings were purchased from [b]Turbosquid[/b] (https://www.turbosquid.com/3d-models/3d-model-23-sci-fi-buildings-pack/867011) and were created by [b]kvakling[/b] (https://www.turbosquid.com/Search/3D-Models/kvakling)
+
+The [b]Background Images[/b] are from [b]NASA[/b] (https://www.nasa.gov/) and the [b]ESA[/b] (https://www.esa.int/)
+
+The [b]Music[/b] was purchased from [b]Arteria3D[/b] (https://arteria3d.myshopify.com/)
+
+The [b]Sound Effects[/b] are by [b]TBA[/b]
+
+The [b]PBR Textures[/b] are from [b]freepbr[/b] (https://freepbr.com/)
+
+The [b]Particles[/b] are from the [b]Particle Pack by Kenney[/b] (https://kenney.nl/assets/particle-pack)
+
+[b]Multiplayer[/b] and the overall [b]Theme[/b] are from the [b]GD-Sync[/b] plug in (https://www.gd-sync.com/)
+
+We have also used the [b]Universal Settings Plugin[/b] from [b]antzGames[/b] (https://github.com/antzGames/Godot-Universal-Settings-Plugin)
+
+
+[b]Copyright (c) Spinalsoft AU 2025[/b]"
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[connection signal="draw" from="PanelContainer/VBoxContainer" to="." method="_on_VBoxContainer_draw"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="tab_selected" from="PanelContainer/VBoxContainer/TabContainer" to="." method="_on_TabContainer_tab_selected"]

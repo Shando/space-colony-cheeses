@@ -1,0 +1,14 @@
+AudioStreamPlayer
+ColorRect
+Node2D
+HSeparator
+Node
+PanelContainer
+VSeparator
+HBoxContainer
+VBoxContainer
+Timer
+Area3D
+AudioStreamPlayer3D
+MarginContainer
+PropertySynchronizer
