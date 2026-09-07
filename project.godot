@@ -16,12 +16,16 @@ publicKey="c97528684565a172"
 privateKey="59dbaba44a95aca2"
 useSenderID=true
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Space Colony Cheeses"
 run/main_scene="res://Menus/main_menu.tscn"
 config/auto_accept_quit=false
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
@@ -35,13 +39,17 @@ Globals="*res://Scripts/Singletons/Globals.gd"
 TTS="*res://Scripts/Singletons/TTS.gd"
 Messages="*res://Scripts/Singletons/Messages.gd"
 Functions="*res://Scripts/Singletons/Functions.gd"
-UniversalSettings="*res://addons/universal_settings/scenes/universal_settings_menu.tscn"
+UniversalSettings="*uid://b6sy572h06xqn"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="Space Colony Cheeses"
 
 [editor_plugins]
 

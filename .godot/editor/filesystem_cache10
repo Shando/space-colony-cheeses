@@ -1,10 +1,10 @@
-63f7b34db8d8cdea90c76aacccf841ec
-::res://::1758404887
+78098b89c88a74ebe8c20117b8754620
+::res://::1788733151
 CONTRIBUTING.md::TextFile::-1::1734999937::0::1::::<><><>0<>0<><>::
 default_bus_layout.tres::AudioBusLayout::1182342420896434965::1733443965::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5524146750605693665::1731403095::1755822711::1::::<><><>0<>0<>04bfc331e220f37e27cbff6543cd2e9a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-Main.gd::GDScript::8178639740962932142::1758252233::0::1::::<>Node<><>0<>0<><>::
-Main.tscn::PackedScene::5095506403954790403::1758252421::0::1::::<><><>0<>0<><>::uid://dor2ab4wd5qve::::res://Main.gd<>uid://cffeupqmk6jgk::::res://Assets/Textures/background.png<>uid://dap71fyjp4nam::::res://Scenes/Main Scenes/InGameScreen.tscn<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://d357xepy4p56q::::res://Scenes/Main Scenes/Main.tres<>uid://swovar6no3ln::::res://Scripts/Camera.gd<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd
+Main.gd::GDScript::8178639740962932142::1788665414::0::1::::<>Node<><>0<>0<><>::
+Main.tscn::PackedScene::5095506403954790403::1788662948::0::1::::<><><>0<>0<><>::uid://dor2ab4wd5qve::::res://Main.gd<>uid://cffeupqmk6jgk::::res://Assets/Textures/background.png<>uid://dap71fyjp4nam::::res://Scenes/Main Scenes/InGameScreen.tscn<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://d357xepy4p56q::::res://Scenes/Main Scenes/Main.tres<>uid://swovar6no3ln::::res://Scripts/Camera.gd<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd
 README.md::TextFile::-1::1731403192::0::1::::<><><>0<>0<><>::
 READMECN.md::TextFile::-1::1734999937::0::1::::<><><>0<>0<><>::
 ::res://addons/::1734999937
@@ -28,10 +28,10 @@ NodeInstantiator.gd::GDScript::7448501350752905581::1734062629::0::1::::<>Node<>
 PropertySynchronizer.gd::GDScript::6529276157713160082::1734938891::0::1::::<>Node<><>0<>1<><>::
 SynchronizedAnimationPlayer.gd::GDScript::7343499697687007904::1732936911::0::1::::<>AnimationPlayer<><>0<>0<><>::
 ::res://addons/GD-Sync/UI/::1731403193
-::res://addons/GD-Sync/UI/ConfigMenu/::1758250145
+::res://addons/GD-Sync/UI/ConfigMenu/::1788574011
 ConfigMenu.gd::GDScript::2168108052179230152::1735270198::0::1::::<>Control<><>0<>1<><>::
 ConfigMenu.tscn::PackedScene::1840268891081674728::1756504090::0::1::::<><><>0<>0<><>::uid://55iom25e881i::::res://addons/GD-Sync/UI/ConfigMenu/ConfigMenu.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://d2pl6xyfyub5k::::res://addons/GD-Sync/UI/ConfigMenu/GDSLogo.png<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd
-GD-Theme.tres::Theme::2151529446458804515::1758250145::0::1::::<><><>0<>0<><>::uid://p1vs0hic5xim::::res://Fonts/NotoSans-Bold.ttf<>uid://ch2aef1jex81f::::res://DemoPage/Fonts/Montserrat-Bold.ttf
+GD-Theme.tres::Theme::2151529446458804515::1788574011::0::1::::<><><>0<>0<><>::uid://p1vs0hic5xim::::res://Fonts/NotoSans-Bold.ttf<>uid://ch2aef1jex81f::::res://DemoPage/Fonts/Montserrat-Bold.ttf
 GDSLogo.png::CompressedTexture2D::9086050987520953802::1733440799::1755822714::1::::<><><>0<>0<>382aba5df96eb5dd1873e84ef33969f5<>res://.godot/imported/GDSLogo.png-f71dad2ce9e497aa8e805547e20fd4d7.ctex::
 ::res://addons/GD-Sync/UI/Icons/::1755822713
 NodeInstantiator.png::CompressedTexture2D::7768697999464836703::1731403193::1755822713::1::::<><><>0<>0<>9f17a5fe2865be3948a0c61033b46835<>res://.godot/imported/NodeInstantiator.png-40efd1f6857451b6a0ca56562b4c914b.ctex::
@@ -45,7 +45,7 @@ scene_library.cfg::TextFile::-1::1733265050::0::1::::<><><>0<>0<><>::
 thumb_placeholder.svg::CompressedTexture2D::2662174520335494183::1733263324::1755822713::1::::<><><>0<>0<>0cdff8a453deb058d01808f3a6caaa5c<>res://.godot/imported/thumb_placeholder.svg-81a80a6d7c59edb9d7ce28b01f213c5c.ctex::
 ::res://addons/scene-library/scripts/::1755831248
 scene_library.gd::GDScript::7512128598385193222::1755831248::0::1::::<>MarginContainer<><>0<>0<><>::
-::res://addons/Todo_Manager/::1758404888
+::res://addons/Todo_Manager/::1788733152
 ColourPicker.gd::GDScript::4092026737480748309::1734999937::0::1::::<>HBoxContainer<><>0<>1<><>::
 Current.gd::GDScript::3693044001992384292::1734999937::0::1::::<>Panel<><>0<>1<><>::
 Dock.gd::GDScript::212257239384370586::1734999937::0::1::::<>Control<><>0<>1<><>::
@@ -53,7 +53,7 @@ Pattern.gd::GDScript::2231651403497080823::1734999937::0::1::::<>HBoxContainer<>
 plugin.cfg::TextFile::-1::1734999937::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript::5347437237643513003::1734999937::0::1::::<>EditorPlugin<><>0<>1<><>::
 Project.gd::GDScript::2250411847532726724::1734999937::0::1::::<>Panel<><>0<>1<><>::
-todo.cfg::TextFile::-1::1758404888::0::1::::<><><>0<>0<><>::
+todo.cfg::TextFile::-1::1788733152::0::1::::<><><>0<>0<><>::
 todoItem_class.gd::GDScript::512410613470325127::1734999937::0::1::::<>RefCounted<><>0<>1<><>::
 todo_class.gd::GDScript::6975356486237911917::1734999937::0::1::::<>RefCounted<><>0<>1<><>::
 ::res://addons/Todo_Manager/doc/::1734999937
@@ -707,16 +707,16 @@ leaderboard_browser.gd::GDScript::5624563777993591786::1756503501::0::1::::<>Con
 leaderboard_browser.tscn::PackedScene::5075232133311189335::1756503790::0::1::::<><><>0<>0<><>::uid://cmet0jw8v78la::::res://GD-SyncTemplates/Leaderboards/leaderboard_browser.gd
 leaderboard_label.gd::GDScript::6724097143837972527::1732936910::0::1::::<>HBoxContainer<><>0<>0<><>::
 leaderboard_label.tscn::PackedScene::4265008646503344434::1732936910::0::1::::<><><>0<>0<><>::res://GD-SyncTemplates/Leaderboards/leaderboard_label.gd
-::res://GD-SyncTemplates/LobbyBrowser/::1758252687
-lobby_browser.gd::GDScript::934561201567522841::1758252687::0::1::::<>Control<><>0<>0<><>::
-lobby_browser.tscn::PackedScene::2350771359477505936::1758251314::0::1::::<><><>0<>0<><>::uid://nkyc661sdm22::::res://GD-SyncTemplates/LobbyBrowser/lobby_browser.gd
+::res://GD-SyncTemplates/LobbyBrowser/::1788731867
+lobby_browser.gd::GDScript::934561201567522841::1788731867::0::1::::<>Control<><>0<>0<><>::
+lobby_browser.tscn::PackedScene::2350771359477505936::1788731658::0::1::::<><><>0<>0<><>::uid://nkyc661sdm22::::res://GD-SyncTemplates/LobbyBrowser/lobby_browser.gd
 lobby_label.gd::GDScript::6651361135794302526::1735270200::0::1::::<>HBoxContainer<><>0<>0<><>::
 lobby_label.tscn::PackedScene::6248439358292950250::1756503854::0::1::::<><><>0<>0<><>::uid://c1077fyyi2s2i::::res://GD-SyncTemplates/LobbyBrowser/lobby_label.gd
-::res://GD-SyncTemplates/TextChat/::1758251412
-text_chat.gd::GDScript::8305736286656810957::1758251412::0::1::::<>Control<><>0<>0<><>::
-text_chat.tscn::PackedScene::7583792625545110574::1758251412::0::1::::<><><>0<>0<><>::uid://dqlmi7hfqm0x2::::res://GD-SyncTemplates/TextChat/text_chat.gd
+::res://GD-SyncTemplates/TextChat/::1788733073
+text_chat.gd::GDScript::8305736286656810957::1788733073::0::1::::<>Control<><>0<>0<><>::
+text_chat.tscn::PackedScene::7583792625545110574::1788665980::0::1::::<><><>0<>0<><>::uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://dqlmi7hfqm0x2::::res://GD-SyncTemplates/TextChat/text_chat.gd
 ::res://Level/::1731811396
-::res://Materials/::1758250145
+::res://Materials/::1788574011
 cross.tres::StandardMaterial3D::7008523347149004463::1735607754::0::1::::<><><>0<>0<><>::
 crystal_blue.tres::StandardMaterial3D::707727680612512782::1734923380::0::1::::<><><>0<>0<><>::
 crystal_green.tres::StandardMaterial3D::778851607425024909::1734141658::0::1::::<><><>0<>0<><>::
@@ -739,26 +739,26 @@ lunar_rock_blue.tres::StandardMaterial3D::7987852516505796528::1734923380::0::1:
 lunar_rock_green.tres::StandardMaterial3D::3079968730514259941::1734141947::0::1::::<><><>0<>0<><>::uid://chyc8ogh1rme5::::res://Assets/Textures/0001_Rocks/lunar-rock/lunar-rock-albedo.png<>uid://i8e8e1flowcx::::res://Assets/Textures/0001_Rocks/lunar-rock/lunar-rock-metalness.png<>uid://c8aypg1a60fng::::res://Assets/Textures/0001_Rocks/lunar-rock/lunar-rock-roughness.png
 lunar_rock_red.tres::StandardMaterial3D::7854347910358144169::1734923380::0::1::::<><><>0<>0<><>::uid://chyc8ogh1rme5::::res://Assets/Textures/0001_Rocks/lunar-rock/lunar-rock-albedo.png<>uid://i8e8e1flowcx::::res://Assets/Textures/0001_Rocks/lunar-rock/lunar-rock-metalness.png<>uid://c8aypg1a60fng::::res://Assets/Textures/0001_Rocks/lunar-rock/lunar-rock-roughness.png
 lunar_rock_yellow.tres::StandardMaterial3D::7592204666698965457::1734141947::0::1::::<><><>0<>0<><>::uid://chyc8ogh1rme5::::res://Assets/Textures/0001_Rocks/lunar-rock/lunar-rock-albedo.png<>uid://i8e8e1flowcx::::res://Assets/Textures/0001_Rocks/lunar-rock/lunar-rock-metalness.png<>uid://c8aypg1a60fng::::res://Assets/Textures/0001_Rocks/lunar-rock/lunar-rock-roughness.png
-outline.gdshader::Shader::4812040951679168152::1758250145::0::1::::<><><>0<>0<><>::
+outline.gdshader::Shader::4812040951679168152::1788574011::0::1::::<><><>0<>0<><>::
 panel.tres::StyleBoxFlat::4502553296416925821::1732245275::0::1::::<><><>0<>0<><>::
 steel_worn.tres::StandardMaterial3D::4163722200371063944::1734923380::0::1::::<><><>0<>0<><>::uid://dde0n13i0p3a8::::res://Assets/Textures/0001_Metals/Steel_Worn_00/Steel_Worn_00_A.png<>uid://cql5tw1gqioxh::::res://Assets/Textures/0001_Metals/Steel_Worn_00/Steel_Worn_00_M.png<>uid://bkexu3gme6fip::::res://Assets/Textures/0001_Metals/Steel_Worn_00/Steel_Worn_00_R.png
-::res://Menus/::1758252806
+::res://Menus/::1788665414
 create_account_menu.gd::GDScript::4142538672059762564::1758251557::0::1::::<>Control<><>0<>0<><>::
-create_account_menu.tscn::PackedScene::5300139329991763611::1758251572::0::1::::<><><>0<>0<><>::uid://b0axah0gtq08o::::res://Menus/create_account_menu.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://dx00vd8c6387g::::res://GD-SyncTemplates/Accounts/create_account.tscn<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
-Help.gd::GDScript::4312684550739482888::1758252508::0::1::::<>Control<><>0<>0<><>::
-Help.tscn::PackedScene::3386664358610631581::1758251368::0::1::::<><><>0<>0<><>::uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://b2pdjw3ntwvum::::res://Menus/Help.gd<>uid://cmc6kxf1rf13q::::res://Assets/Textures/Models/crystal_farm_yellow_black.png<>uid://b1a722n3fy2px::::res://Fonts/NotoSans-Regular.otf<>uid://rid1a4cf3ret::::res://Assets/Textures/Models/crystal_powerplant_yellow_black.png<>uid://c6g4lptrcrpgy::::res://Assets/Textures/Models/power_plant_yellow_black.png<>uid://dsrtn6fx1qsvi::::res://Assets/Textures/Models/rocket_silo_yellow_black.png<>uid://bhgnpkdej7416::::res://Assets/Textures/Models/fuel_depot_yellow_black.png<>uid://vbrgvbc2qkgs::::res://Assets/Textures/Models/tower_yellow_black.png<>uid://cmfnsqpnwsibn::::res://Assets/Textures/Models/depot_yellow_black.png<>uid://dyum7m58pkett::::res://Assets/Textures/Models/storage_yellow_black.png<>uid://cpaefqpitir2h::::res://Assets/Textures/Models/factory_yellow_black.png<>uid://pane13f1bdwn::::res://Assets/Textures/Models/biosphere_yellow_black.png<>uid://bkn8qxby0qx50::::res://Assets/Textures/Models/altar_2_yellow_black.png<>uid://c6kmhkpqfloon::::res://Assets/Textures/Models/altar_yellow_black.png<>uid://umm8cw30hwkq::::res://Assets/Textures/Models/construction_yellow_black.png<>uid://dvxdha4qkjw1u::::res://Assets/Textures/Models/command_center_1_yellow_black.png<>uid://b0scgxavkchaw::::res://Assets/Textures/Models/factory_2_yellow_black.png<>uid://yq4c1ypduo80::::res://Assets/Textures/Models/command_center_3_yellow_black.png<>uid://b20q1dggp41ay::::res://Assets/Textures/Models/portal_yellow_black.png
-lobby.gd::GDScript::2037677819871729570::1758251609::0::1::::<>Control<><>0<>0<><>::
-lobby.tscn::PackedScene::2139942993680963878::1758251609::0::1::::<><><>0<>0<><>::uid://4bcix6h0na5o::::res://Menus/lobby.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://dgbv7r0yrg4yk::::res://GD-SyncTemplates/TextChat/text_chat.tscn<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://p1vs0hic5xim::::res://Fonts/NotoSans-Bold.ttf<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
+create_account_menu.tscn::PackedScene::5300139329991763611::1788574888::0::1::::<><><>0<>0<><>::uid://b0axah0gtq08o::::res://Menus/create_account_menu.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://dx00vd8c6387g::::res://GD-SyncTemplates/Accounts/create_account.tscn<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
+Help.gd::GDScript::4312684550739482888::1788665341::0::1::::<>Control<><>0<>0<><>::
+Help.tscn::PackedScene::3386664358610631581::1788665414::0::1::::<><><>0<>0<><>::uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://b2pdjw3ntwvum::::res://Menus/Help.gd<>uid://cmc6kxf1rf13q::::res://Assets/Textures/Models/crystal_farm_yellow_black.png<>uid://b1a722n3fy2px::::res://Fonts/NotoSans-Regular.otf<>uid://rid1a4cf3ret::::res://Assets/Textures/Models/crystal_powerplant_yellow_black.png<>uid://c6g4lptrcrpgy::::res://Assets/Textures/Models/power_plant_yellow_black.png<>uid://dsrtn6fx1qsvi::::res://Assets/Textures/Models/rocket_silo_yellow_black.png<>uid://bhgnpkdej7416::::res://Assets/Textures/Models/fuel_depot_yellow_black.png<>uid://vbrgvbc2qkgs::::res://Assets/Textures/Models/tower_yellow_black.png<>uid://cmfnsqpnwsibn::::res://Assets/Textures/Models/depot_yellow_black.png<>uid://dyum7m58pkett::::res://Assets/Textures/Models/storage_yellow_black.png<>uid://cpaefqpitir2h::::res://Assets/Textures/Models/factory_yellow_black.png<>uid://pane13f1bdwn::::res://Assets/Textures/Models/biosphere_yellow_black.png<>uid://bkn8qxby0qx50::::res://Assets/Textures/Models/altar_2_yellow_black.png<>uid://c6kmhkpqfloon::::res://Assets/Textures/Models/altar_yellow_black.png<>uid://umm8cw30hwkq::::res://Assets/Textures/Models/construction_yellow_black.png<>uid://dvxdha4qkjw1u::::res://Assets/Textures/Models/command_center_1_yellow_black.png<>uid://b0scgxavkchaw::::res://Assets/Textures/Models/factory_2_yellow_black.png<>uid://yq4c1ypduo80::::res://Assets/Textures/Models/command_center_3_yellow_black.png<>uid://b20q1dggp41ay::::res://Assets/Textures/Models/portal_yellow_black.png
+lobby.gd::GDScript::2037677819871729570::1788652623::0::1::::<>Control<><>0<>0<><>::
+lobby.tscn::PackedScene::2139942993680963878::1788650050::0::1::::<><><>0<>0<><>::uid://4bcix6h0na5o::::res://Menus/lobby.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://dgbv7r0yrg4yk::::res://GD-SyncTemplates/TextChat/text_chat.tscn<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://p1vs0hic5xim::::res://Fonts/NotoSans-Bold.ttf<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
 lobby_browsing_menu.gd::GDScript::4577862389035802159::1758251631::0::1::::<>Control<><>0<>0<><>::
-lobby_browsing_menu.tscn::PackedScene::8818693848782245911::1758252806::0::1::::<><><>0<>0<><>::uid://8qy4jenu2w1m::::res://GD-SyncTemplates/LobbyBrowser/lobby_browser.tscn<>uid://b6hsyv1esr3xj::::res://Menus/lobby_browsing_menu.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://ckhquhn0c05jc::::res://Menus/lobby_creator.gd<>uid://bgccmpwtj5850::::res://Menus/lobby_joiner.gd<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
+lobby_browsing_menu.tscn::PackedScene::8818693848782245911::1788574887::0::1::::<><><>0<>0<><>::uid://8qy4jenu2w1m::::res://GD-SyncTemplates/LobbyBrowser/lobby_browser.tscn<>uid://b6hsyv1esr3xj::::res://Menus/lobby_browsing_menu.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://ckhquhn0c05jc::::res://Menus/lobby_creator.gd<>uid://bgccmpwtj5850::::res://Menus/lobby_joiner.gd<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
 lobby_creator.gd::GDScript::5490188024692790004::1758252613::0::1::::<>PanelContainer<><>0<>0<><>::
 lobby_joiner.gd::GDScript::2811826187254274297::1758252642::0::1::::<>PanelContainer<><>0<>0<><>::
 login_menu.gd::GDScript::7725056589307220279::1758251660::0::1::::<>Control<><>0<>0<><>::
-login_menu.tscn::PackedScene::3359495501460477354::1758251660::0::1::::<><><>0<>0<><>::uid://diccs2yc7iiih::::res://Menus/login_menu.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://b6v2t1l5wlcjk::::res://GD-SyncTemplates/Accounts/login.tscn<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
-main_menu.gd::GDScript::7090941807492845424::1758250464::0::1::::<>Control<><>0<>0<><>::
-main_menu.tscn::PackedScene::4985942732933855134::1758250464::0::1::::<><><>0<>0<><>::uid://c8a51ms85xh57::::res://Menus/main_menu.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://d2pl6xyfyub5k::::res://addons/GD-Sync/UI/ConfigMenu/GDSLogo.png<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
+login_menu.tscn::PackedScene::3359495501460477354::1788574889::0::1::::<><><>0<>0<><>::uid://diccs2yc7iiih::::res://Menus/login_menu.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://b6v2t1l5wlcjk::::res://GD-SyncTemplates/Accounts/login.tscn<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
+main_menu.gd::GDScript::7090941807492845424::1788574886::0::1::::<>Control<><>0<>0<><>::
+main_menu.tscn::PackedScene::4985942732933855134::1788574886::0::1::::<><><>0<>0<><>::uid://c8a51ms85xh57::::res://Menus/main_menu.gd<>uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://d2pl6xyfyub5k::::res://addons/GD-Sync/UI/ConfigMenu/GDSLogo.png<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
 player_customization_menu.gd::GDScript::3218256404817849087::1758251683::0::1::::<>Control<><>0<>0<><>::
-player_customization_menu.tscn::PackedScene::4646490849722656445::1758251683::0::1::::<><><>0<>0<><>::uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bl37hh8ws6hj0::::res://Menus/player_customization_menu.gd<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
+player_customization_menu.tscn::PackedScene::4646490849722656445::1788574889::0::1::::<><><>0<>0<><>::uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://bl37hh8ws6hj0::::res://Menus/player_customization_menu.gd<>uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://boir4qp8fpp3b::::res://Menus/Help.tscn<>uid://dukfg3jsicjo6::::res://Assets/Sounds/Music/call_from_out_there.ogg
 ::res://Particles/::1734923380
 blue.tres::QuadMesh::1827064067380867585::1732247987::0::1::::<><><>0<>0<><>::uid://cvlk53df7vqda::::res://Particles/blue_1.tres
 blue_1.tres::StandardMaterial3D::6270177458383352366::1734923380::0::1::::<><><>0<>0<><>::uid://cqfvrd7okrfd3::::res://Assets/Particles/spark_06.png
@@ -774,11 +774,11 @@ yellow.tres::ParticleProcessMaterial::5987500585368955068::1732248050::0::1::::<
 yellow_1.tres::StandardMaterial3D::1097731063584727694::1734141608::0::1::::<><><>0<>0<><>::uid://cqfvrd7okrfd3::::res://Assets/Particles/spark_06.png
 ::res://Player/::1731811444
 ::res://Scenes/::1731620909
-::res://Scenes/Main Scenes/::1758250145
-InGameScreen.tscn::PackedScene::7192217391922429368::1757822222::0::1::::<><><>0<>0<><>::uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://dgbv7r0yrg4yk::::res://GD-SyncTemplates/TextChat/text_chat.tscn<>uid://c4tqxaag311ft::::res://Scripts/InGameScreen.gd
-Main.tres::Environment::9188465256989638702::1758250145::0::1::::<><><>0<>0<><>::uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg
+::res://Scenes/Main Scenes/::1788729789
+InGameScreen.tscn::PackedScene::7192217391922429368::1788729789::0::1::::<><><>0<>0<><>::uid://5whm1igkt23h::::res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres<>uid://c465n5rovhtmk::::res://Fonts/Zebulon.otf<>uid://dgbv7r0yrg4yk::::res://GD-SyncTemplates/TextChat/text_chat.tscn<>uid://c4tqxaag311ft::::res://Scripts/InGameScreen.gd
+Main.tres::Environment::9188465256989638702::1788574011::0::1::::<><><>0<>0<><>::uid://bd1dudyjs6m5::::res://Assets/Textures/crab_nasa.jpg
 new_panoramasky.tres::Sky::-1::1677365185::0::1::::<><><>0<>0<><>::res://Assets/Textures/background.png
-::res://Scenes/Support Scenes/::1758250145
+::res://Scenes/Support Scenes/::1788574011
 altar_2_blue.tscn::PackedScene::8633805317384465114::1757819536::0::1::::<><><>0<>0<><>::uid://06c1xt8ggmpo::::res://Assets/Models/altar_2.gltf<>uid://bfp26coc6d2fc::::res://Materials/floor.tres<>uid://dl2m08cuodd6o::::res://Materials/lunar_rock_blue.tres<>uid://cle0gtrvwdqv7::::res://Scenes/Support Scenes/modules.gd<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd<>uid://b0k65qew54qq7::::res://Materials/steel_worn.tres
 altar_2_green.tscn::PackedScene::5066703025668712119::1757819893::0::1::::<><><>0<>0<><>::uid://06c1xt8ggmpo::::res://Assets/Models/altar_2.gltf<>uid://cle0gtrvwdqv7::::res://Scenes/Support Scenes/modules.gd<>uid://bj47vuceyeswr::::res://Materials/lunar_rock_green.tres<>uid://bfp26coc6d2fc::::res://Materials/floor.tres<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd<>uid://b0k65qew54qq7::::res://Materials/steel_worn.tres
 altar_2_red.tscn::PackedScene::3533418847679597585::1757819893::0::1::::<><><>0<>0<><>::uid://06c1xt8ggmpo::::res://Assets/Models/altar_2.gltf<>uid://bfp26coc6d2fc::::res://Materials/floor.tres<>uid://dj5x7yya5jpjt::::res://Materials/lunar_rock_red.tres<>uid://cle0gtrvwdqv7::::res://Scenes/Support Scenes/modules.gd<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd<>uid://b0k65qew54qq7::::res://Materials/steel_worn.tres
@@ -832,7 +832,7 @@ fuel_depot_yellow.tscn::PackedScene::5129262263272170608::1757820367::0::1::::<>
 lightning.gd::GDScript::5373101330072891533::1732335653::0::1::::<>Node3D<><>0<>0<><>::
 lightning.tscn::PackedScene::2032497575433527384::1734141800::0::1::::<><><>0<>0<><>::uid://cyeqojt4fiujs::::res://Assets/Models/lightning.gltf<>uid://c2jpjk4fkayna::::res://Materials/lightning.tres<>uid://cis1guerlrfqb::::res://Scenes/Support Scenes/lightning.gd<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd
 modules.gd::GDScript::5554705823192396674::1757883846::0::1::::<>Node3D<><>0<>0<><>::
-octagon_fissure.gdshader::Shader::6465917899343898058::1758250145::0::1::::<><><>0<>0<><>::
+octagon_fissure.gdshader::Shader::6465917899343898058::1788574011::0::1::::<><><>0<>0<><>::
 octagon_fissure.tscn::PackedScene::3796117700353149973::1756092979::0::1::::<><><>0<>0<><>::uid://beswcv7d501ra::::res://Assets/Models/octagon_fissure.gltf<>uid://dmblqu15d8y0m::::res://Materials/lunar_rock.tres<>uid://rt6s38g6bgor::::res://Particles/smoke.tres<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd<>uid://d2e28144lrkys::::res://Particles/steam_2.tres
 octagon_fissure_blue.tscn::PackedScene::6189070711099447805::1756092979::0::1::::<><><>0<>0<><>::uid://beswcv7d501ra::::res://Assets/Models/octagon_fissure.gltf<>uid://b5qubg5ysnoqb::::res://Materials/dirt-blue.tres<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd<>uid://rt6s38g6bgor::::res://Particles/smoke.tres<>uid://d2e28144lrkys::::res://Particles/steam_2.tres
 octagon_fissure_green.tscn::PackedScene::2023200003639477026::1756092980::0::1::::<><><>0<>0<><>::uid://beswcv7d501ra::::res://Assets/Models/octagon_fissure.gltf<>uid://br132tbsm6nlx::::res://Materials/dirt-green.tres<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd<>uid://rt6s38g6bgor::::res://Particles/smoke.tres<>uid://d2e28144lrkys::::res://Particles/steam_2.tres
@@ -883,9 +883,9 @@ tower_blue.tscn::PackedScene::3693124998835892062::1757820518::0::1::::<><><>0<>
 tower_green.tscn::PackedScene::355063853341972550::1757820518::0::1::::<><><>0<>0<><>::uid://c7rpupbbw186v::::res://Assets/Models/tower.gltf<>uid://cle0gtrvwdqv7::::res://Scenes/Support Scenes/modules.gd<>uid://b0k65qew54qq7::::res://Materials/steel_worn.tres<>uid://bfp26coc6d2fc::::res://Materials/floor.tres<>uid://bj47vuceyeswr::::res://Materials/lunar_rock_green.tres<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd
 tower_red.tscn::PackedScene::7545845719582194275::1757820518::0::1::::<><><>0<>0<><>::uid://c7rpupbbw186v::::res://Assets/Models/tower.gltf<>uid://cle0gtrvwdqv7::::res://Scenes/Support Scenes/modules.gd<>uid://b0k65qew54qq7::::res://Materials/steel_worn.tres<>uid://bfp26coc6d2fc::::res://Materials/floor.tres<>uid://dj5x7yya5jpjt::::res://Materials/lunar_rock_red.tres<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd
 tower_yellow.tscn::PackedScene::5077266001081835087::1757820518::0::1::::<><><>0<>0<><>::uid://c7rpupbbw186v::::res://Assets/Models/tower.gltf<>uid://cle0gtrvwdqv7::::res://Scenes/Support Scenes/modules.gd<>uid://b0k65qew54qq7::::res://Materials/steel_worn.tres<>uid://bfp26coc6d2fc::::res://Materials/floor.tres<>uid://dgfyrb45jp30h::::res://Materials/lunar_rock_yellow.tres<>uid://c0a3hvm74q10i::::res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd
-::res://Scripts/::1758252421
+::res://Scripts/::1788729789
 Camera.gd::GDScript::1309703063332759891::1757819233::0::1::::<>Camera3D<><>0<>0<><>::
-InGameScreen.gd::GDScript::6848553555671435125::1758252421::0::1::::<>Control<><>0<>0<><>::
+InGameScreen.gd::GDScript::6848553555671435125::1788729789::0::1::::<>Control<><>0<>0<><>::
 ::res://Scripts/Singletons/::1758250953
 Functions.gd::GDScript::8453025676529705445::1757818688::0::1::::<>Node<><>0<>0<><>::
 Globals.gd::GDScript::2874634007722460686::1758250953::0::1::::<>Node<><>0<>0<><>::

@@ -1,3 +1,5 @@
+Label
+RichTextLabel
 AudioStreamPlayer
 ColorRect
 Node2D
@@ -11,4 +13,3 @@ Timer
 Area3D
 AudioStreamPlayer3D
 MarginContainer
-PropertySynchronizer

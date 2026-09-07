@@ -1,5 +1,7 @@
 extends Control
 
+@onready var sfx = $SFX
+
 var iDiff = 4
 var oldHostID = -1
 var chkOld = -1
@@ -16,8 +18,8 @@ func _notification(what):
 		GDSync.quit()
 
 func disconnected():
-	$SFX.stream = Globals.sfx_error
-	$SFX.play()
+	sfx.stream = Globals.sfx_error
+	sfx.play()
 	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")
 
 func _ready():
@@ -49,8 +51,10 @@ func host_changed(is_host : bool, _new_host_id : int):
 		checkPlayers()
 
 func client_joined(client_id : int):
-	$SFX.stream = Globals.sfx_ok
-	$SFX.play()
+	if sfx != null:
+		sfx.stream = Globals.sfx_ok
+		sfx.play()
+
 	var label : Label = Label.new()
 	label.name = str(client_id)
 	%PlayerList.add_child(label)
@@ -60,8 +64,8 @@ func client_joined(client_id : int):
 	checkPlayers()
 
 func client_left(client_id : int):
-	$SFX.stream = Globals.sfx_error
-	$SFX.play()
+	sfx.stream = Globals.sfx_error
+	sfx.play()
 
 	if %PlayerList.has_node(str(client_id)):
 		%PlayerList.get_node(str(client_id)).queue_free()
@@ -89,8 +93,8 @@ func checkPlayers():
 			%Waiting.set_text("Waiting for " + str(iDiff) + " more player(s) to join.")
 
 func _on_start_pressed():
-	$SFX.stream = Globals.sfx_click
-	$SFX.play()
+	sfx.stream = Globals.sfx_click
+	sfx.play()
 	GDSync.close_lobby()
 	GDSync.call_func(switch_scene)
 	Globals.curMusicPos = 0.0
@@ -100,8 +104,8 @@ func switch_scene():
 	get_tree().change_scene_to_file("res://Main.tscn")
 
 func _on_leave_pressed():
-	$SFX.stream = Globals.sfx_click
-	$SFX.play()
+	sfx.stream = Globals.sfx_click
+	sfx.play()
 	GDSync.leave_lobby()
 	Globals.curMusicPos = $AudioStreamPlayer.get_playback_position()
 	get_tree().change_scene_to_file("res://Menus/lobby_browsing_menu.tscn")
@@ -109,8 +113,8 @@ func _on_leave_pressed():
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.keycode == KEY_F1 and not event.is_echo() and event.is_pressed():
-			$SFX.stream = Globals.sfx_click
-			$SFX.play()
+			sfx.stream = Globals.sfx_click
+			sfx.play()
 
 			if UniversalSettings.visible:
 				UniversalSettings.quit_menu()
@@ -120,8 +124,8 @@ func _input(event: InputEvent) -> void:
 			else:
 				$Help.visible = true
 		elif event.keycode == KEY_F2 and not event.is_echo() and event.is_pressed():
-			$SFX.stream = Globals.sfx_click
-			$SFX.play()
+			sfx.stream = Globals.sfx_click
+			sfx.play()
 
 			if $Help.visible:
 				$Help.visible = false

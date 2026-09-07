@@ -14,7 +14,7 @@ func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		if GDSync.is_active():
 			if Globals.bStarted:
-				GDSync.call_func(Globals.playerQuit, [Globals.iMyPN])
+				GDSync.call_func(Functions.playerQuit, [Globals.iMyPN])
 
 			GDSync.quit()
 		else:

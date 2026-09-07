@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ceukimngp1r84"]
+[gd_scene format=3 uid="uid://ceukimngp1r84"]
 
 [ext_resource type="Script" uid="uid://dor2ab4wd5qve" path="res://Main.gd" id="1_s2eve"]
 [ext_resource type="Texture2D" uid="uid://cffeupqmk6jgk" path="res://Assets/Textures/background.png" id="3_lgr22"]
@@ -9,16 +9,16 @@
 [ext_resource type="Script" uid="uid://swovar6no3ln" path="res://Scripts/Camera.gd" id="8_t4csl"]
 [ext_resource type="Script" uid="uid://c0a3hvm74q10i" path="res://addons/GD-Sync/Scripts/Types/PropertySynchronizer.gd" id="9_03owx"]
 
-[node name="Spatial" type="Node"]
+[node name="Spatial" type="Node" unique_id=2006287515]
 script = ExtResource("1_s2eve")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=["WorldNode"]]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1647508144 groups=["WorldNode"]]
 environment = ExtResource("7_5u55n")
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="WorldEnvironment"]
+[node name="CanvasLayer2" type="CanvasLayer" parent="WorldEnvironment" unique_id=80457344]
 layer = -1
 
-[node name="TextureRect" type="TextureRect" parent="WorldEnvironment/CanvasLayer2"]
+[node name="TextureRect" type="TextureRect" parent="WorldEnvironment/CanvasLayer2" unique_id=1060984245]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -29,24 +29,24 @@ size_flags_vertical = 3
 texture = ExtResource("3_lgr22")
 expand_mode = 1
 
-[node name="DirectionalLight" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight" type="DirectionalLight3D" parent="." unique_id=1277659109]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 100, 0)
 light_energy = 5.0
 
-[node name="Camera" type="Camera3D" parent="."]
+[node name="Camera" type="Camera3D" parent="." unique_id=1979421120]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 15, 5)
 script = ExtResource("8_t4csl")
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=811456631]
 bus = &"Music"
 
-[node name="Sfx" type="AudioStreamPlayer" parent="."]
+[node name="Sfx" type="AudioStreamPlayer" parent="." unique_id=1087351166]
 
-[node name="Speech" type="AudioStreamPlayer" parent="."]
+[node name="Speech" type="AudioStreamPlayer" parent="." unique_id=1124869097]
 
-[node name="TextToSpeech" type="AudioStreamPlayer" parent="."]
+[node name="TextToSpeech" type="AudioStreamPlayer" parent="." unique_id=1729390797]
 
-[node name="Popup" type="Popup" parent="."]
+[node name="Popup" type="Popup" parent="." unique_id=710671924]
 oversampling_override = 1.0
 title = "Are You Sure?"
 initial_position = 2
@@ -55,7 +55,7 @@ borderless = false
 always_on_top = true
 theme = ExtResource("5_trn2v")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Popup"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup" unique_id=1274328314]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -64,37 +64,37 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="Popup/VBoxContainer"]
+[node name="Label" type="Label" parent="Popup/VBoxContainer" unique_id=1366496578]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Are you sure you want to Quit the game?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Popup/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/VBoxContainer" unique_id=2126245514]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="btnYes" type="Button" parent="Popup/VBoxContainer/HBoxContainer"]
+[node name="btnYes" type="Button" parent="Popup/VBoxContainer/HBoxContainer" unique_id=1164019442]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "YES"
 
-[node name="btnOK" type="Button" parent="Popup/VBoxContainer/HBoxContainer"]
+[node name="btnOK" type="Button" parent="Popup/VBoxContainer/HBoxContainer" unique_id=1668088570]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "OK"
 
-[node name="btnNo" type="Button" parent="Popup/VBoxContainer/HBoxContainer"]
+[node name="btnNo" type="Button" parent="Popup/VBoxContainer/HBoxContainer" unique_id=1593957493]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "NO"
 
-[node name="Buildings" type="Node3D" parent="."]
+[node name="Buildings" type="Node3D" parent="." unique_id=2068200615]
 
-[node name="Board" type="Node3D" parent="."]
+[node name="Board" type="Node3D" parent="." unique_id=1292428424]
 
-[node name="PropertySynchronizer4" type="Node" parent="."]
+[node name="PropertySynchronizer4" type="Node" parent="." unique_id=1029453876]
 script = ExtResource("9_03owx")
 broadcast = 5
 process = 1
@@ -106,11 +106,11 @@ interpolated = false
 interpolation_speed = 1.0
 metadata/_custom_type_script = "uid://c0a3hvm74q10i"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1755724213]
 layer = 2
 follow_viewport_enabled = true
 
-[node name="UI" type="MarginContainer" parent="CanvasLayer"]
+[node name="UI" type="MarginContainer" parent="CanvasLayer" unique_id=342776898]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -123,10 +123,10 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="InGame" parent="CanvasLayer/UI" instance=ExtResource("5_a80ao")]
+[node name="InGame" parent="CanvasLayer/UI" unique_id=1666268040 instance=ExtResource("5_a80ao")]
 layout_mode = 2
 
-[node name="Help" parent="CanvasLayer/UI" instance=ExtResource("6_to8uw")]
+[node name="Help" parent="CanvasLayer/UI" unique_id=588804308 instance=ExtResource("6_to8uw")]
 visible = false
 layout_mode = 2
 

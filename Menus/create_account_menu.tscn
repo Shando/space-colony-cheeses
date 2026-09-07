@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://chrorxt83cckp"]
+[gd_scene format=3 uid="uid://chrorxt83cckp"]
 
 [ext_resource type="Script" uid="uid://b0axah0gtq08o" path="res://Menus/create_account_menu.gd" id="1_flikr"]
 [ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="1_xcsf6"]
@@ -11,7 +11,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rpgx0"]
 texture = ExtResource("2_nswdh")
 
-[node name="CreateAccountMenu" type="Control"]
+[node name="CreateAccountMenu" type="Control" unique_id=802865268]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,15 @@ grow_vertical = 2
 theme = ExtResource("1_xcsf6")
 script = ExtResource("1_flikr")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=527420061]
+stream = ExtResource("7_drn5k")
+bus = &"Music"
+parameters/looping = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=945787013]
+bus = &"SFX"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1636502400]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,10 +39,10 @@ grow_vertical = 2
 theme = ExtResource("1_xcsf6")
 theme_override_styles/panel = SubResource("StyleBoxTexture_rpgx0")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1642217988]
 layout_mode = 2
 
-[node name="Header" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1163636150]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -43,15 +51,15 @@ theme_override_font_sizes/font_size = 64
 text = "SPACE COLONY CHEESES II"
 horizontal_alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer" unique_id=628666559]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer" unique_id=278374721]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=1073974152]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 0, 1)
@@ -59,17 +67,9 @@ theme_override_font_sizes/font_size = 24
 text = "Create Account"
 horizontal_alignment = 1
 
-[node name="CreateAccount" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource("4_77q8d")]
+[node name="CreateAccount" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=1901995654 instance=ExtResource("4_77q8d")]
 layout_mode = 2
 
-[node name="Help" parent="." instance=ExtResource("6_drn5k")]
+[node name="Help" parent="." unique_id=581913068 instance=ExtResource("6_drn5k")]
 visible = false
 layout_mode = 1
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_drn5k")
-bus = &"Music"
-parameters/looping = true
-
-[node name="SFX" type="AudioStreamPlayer" parent="."]
-bus = &"SFX"

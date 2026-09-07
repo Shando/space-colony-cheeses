@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdbh0pdnfm0i1"]
+[gd_scene format=3 uid="uid://cdbh0pdnfm0i1"]
 
 [ext_resource type="Script" uid="uid://c8a51ms85xh57" path="res://Menus/main_menu.gd" id="1_e4nnw"]
 [ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="2_wrm8m"]
@@ -11,7 +11,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6lui3"]
 texture = ExtResource("3_ms2rs")
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=395016960]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +20,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e4nnw")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=427189861]
+stream = ExtResource("7_gn11b")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1899813709]
+bus = &"SFX"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1153110278]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,10 +39,10 @@ grow_vertical = 2
 theme = ExtResource("2_wrm8m")
 theme_override_styles/panel = SubResource("StyleBoxTexture_6lui3")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1067294892]
 layout_mode = 2
 
-[node name="Header" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1483709203]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -42,31 +51,31 @@ theme_override_font_sizes/font_size = 64
 text = "SPACE COLONY CHEESES II"
 horizontal_alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer" unique_id=1105324282]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer" unique_id=928154410]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=1456654639]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.992157, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "*** Press F1 for Help, F2 for Settings ***"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=468788044]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.992157, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Powered By"
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=755241203]
 layout_mode = 2
 texture = ExtResource("3_852ct")
 
-[node name="Connect" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Connect" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=1634539100]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
@@ -75,7 +84,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "LOG IN"
 
-[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=638175516]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
@@ -84,9 +93,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "QUIT"
 
-[node name="Message" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Message" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=100170211]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 75)
+custom_maximum_size = Vector2(512, 75)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 24
@@ -94,18 +104,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Help" parent="." instance=ExtResource("6_gn11b")]
+[node name="Help" parent="." unique_id=926286139 instance=ExtResource("6_gn11b")]
 visible = false
 layout_mode = 1
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_gn11b")
-autoplay = true
-bus = &"Music"
-parameters/looping = true
-
-[node name="SFX" type="AudioStreamPlayer" parent="."]
-bus = &"SFX"
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer/Connect" to="." method="_on_connect_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

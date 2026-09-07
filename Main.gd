@@ -5,6 +5,7 @@ extends Node
 @onready var ui = $CanvasLayer/UI
 @onready var popup = $Popup
 @onready var btnOK = $Popup/VBoxContainer/HBoxContainer/btnOK
+@onready var Sfx = $Sfx
 
 # tAvailArea = used to place Start Ups - stops players choosing the same area
 var tAvailArea = [true, true, true, true, true]
@@ -1449,8 +1450,10 @@ func _ready():
 	_started.call_deferred()
 
 func _notification(what):
-	$Sfx.stream = Globals.sfx_click
-	$Sfx.play()
+	if Sfx != null:
+		Sfx.stream = Globals.sfx_click
+		Sfx.play()
+
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		btnOK.visible = false
 		popup.visible = true
@@ -1862,8 +1865,8 @@ func updateiWait(inWait):
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.keycode == KEY_F1 and not event.is_echo() and event.is_pressed():
-			$Sfx.stream = Globals.sfx_click
-			$Sfx.play()
+			Sfx.stream = Globals.sfx_click
+			Sfx.play()
 
 			if UniversalSettings.visible:
 				UniversalSettings.quit_menu()
@@ -1873,8 +1876,8 @@ func _input(event: InputEvent) -> void:
 			else:
 				help.visible = true
 		elif event.keycode == KEY_F2 and not event.is_echo() and event.is_pressed():
-			$Sfx.stream = Globals.sfx_click
-			$Sfx.play()
+			Sfx.stream = Globals.sfx_click
+			Sfx.play()
 
 			if help.visible:
 				help.visible = false
@@ -1884,14 +1887,14 @@ func _input(event: InputEvent) -> void:
 			else:
 				UniversalSettings.show_screen()
 		elif event.keycode == KEY_F3 and not event.is_echo() and event.is_pressed():
-			$Sfx.stream = Globals.sfx_click
-			$Sfx.play()
+			Sfx.stream = Globals.sfx_click
+			Sfx.play()
 
 			if TTS.is_speaking():
 				TTS.stop()
 		elif event.keycode == KEY_F12 and not event.is_echo() and event.is_pressed():
-			$Sfx.stream = Globals.sfx_click
-			$Sfx.play()
+			Sfx.stream = Globals.sfx_click
+			Sfx.play()
 			btnOK.visible = false
 			popup.visible = true
 	elif event is InputEventMouseMotion:
@@ -1995,11 +1998,11 @@ func _input(event: InputEvent) -> void:
 							Functions.addIcon(result.x, result.y, -1, 1)
 
 func _on_btn_yes_pressed() -> void:
-	$Sfx.stream = Globals.sfx_click
-	$Sfx.play()
+	Sfx.stream = Globals.sfx_click
+	Sfx.play()
 
 	if Globals.bStarted:
-		GDSync.call_func(Globals.playerQuit, [Globals.iMyPN])
+		GDSync.call_func(Functions.playerQuit, [Globals.iMyPN])
 
 	GDSync.quit()
 
@@ -2007,8 +2010,8 @@ func _on_btn_ok_pressed() -> void:
 	pass
 
 func _on_btn_no_pressed() -> void:
-	$Sfx.stream = Globals.sfx_click
-	$Sfx.play()
+	Sfx.stream = Globals.sfx_click
+	Sfx.play()
 	popup.visible = false
 
 func otherIncome():

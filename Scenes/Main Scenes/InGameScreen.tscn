@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dap71fyjp4nam"]
+[gd_scene format=3 uid="uid://dap71fyjp4nam"]
 
 [ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="1_oapnj"]
 [ext_resource type="FontFile" uid="uid://c465n5rovhtmk" path="res://Fonts/Zebulon.otf" id="2_fhsi7"]
@@ -18,7 +18,7 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_44d2v"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=1957058912]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,20 +29,20 @@ mouse_filter = 2
 theme = ExtResource("1_oapnj")
 script = ExtResource("12")
 
-[node name="TextToSpeech" type="AudioStreamPlayer" parent="."]
+[node name="TextToSpeech" type="AudioStreamPlayer" parent="." unique_id=30854001]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1949508441]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1770624601]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=1391238201]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8u5qg")
 
-[node name="Header" type="Label" parent="VBoxContainer/PanelContainer"]
+[node name="Header" type="Label" parent="VBoxContainer/PanelContainer" unique_id=234532359]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -51,24 +51,24 @@ theme_override_font_sizes/font_size = 64
 text = "SPACE COLONY CHEESES II"
 horizontal_alignment = 1
 
-[node name="Scores" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Scores" type="HBoxContainer" parent="VBoxContainer" unique_id=992261255]
 layout_mode = 2
 
-[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/Scores"]
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/Scores" unique_id=444963201]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Scores/PanelContainer2"]
+[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Scores/PanelContainer2" unique_id=2095223324]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer" unique_id=1291788722]
 layout_mode = 2
 
-[node name="lblP1" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblP1" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=309691224]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -78,13 +78,13 @@ text = "Player 1:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lblScoreP1" type="Button" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblScoreP1" type="Button" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=486173681]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 0.533333, 0, 1)
 text = "000"
 
-[node name="lblP2" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblP2" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=1280853149]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -94,14 +94,14 @@ text = "Player2:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lblScoreP2" type="Button" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblScoreP2" type="Button" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=251854375]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 text = "000"
 
-[node name="lblP3" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblP3" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=1838180487]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -111,13 +111,13 @@ text = "Player 3:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lblScoreP3" type="Button" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblScoreP3" type="Button" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=525771563]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 text = "000"
 
-[node name="lblP4" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblP4" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=1477149192]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -127,13 +127,13 @@ text = "Player4:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lblScoreP4" type="Button" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblScoreP4" type="Button" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=2053888586]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "000"
 
-[node name="lblRem" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblRem" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=406658834]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -144,7 +144,7 @@ text = "Rounds Remaining:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lblRoundsRem" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer"]
+[node name="lblRoundsRem" type="Label" parent="VBoxContainer/Scores/PanelContainer2/PanelContainer/HBoxContainer" unique_id=789006512]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 1
@@ -154,47 +154,47 @@ text = "15	"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="HSeparator" parent="VBoxContainer"]
+[node name="Label" type="HSeparator" parent="VBoxContainer" unique_id=1090058473]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_oapnj")
 
-[node name="Main" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Main" type="HBoxContainer" parent="VBoxContainer" unique_id=812939229]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Modules" type="VBoxContainer" parent="VBoxContainer/Main"]
+[node name="Modules" type="VBoxContainer" parent="VBoxContainer/Main" unique_id=291398856]
 custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
 
-[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/Main/Modules"]
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/Main/Modules" unique_id=912201819]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2" unique_id=284358350]
 layout_mode = 2
 
-[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer"]
+[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer" unique_id=927773658]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="Label2" type="Label" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/PanelContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/PanelContainer" unique_id=1470179250]
 layout_mode = 2
 size_flags_vertical = 1
 text = "AVAILABLE MODULES"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer" unique_id=1533360462]
 layout_mode = 2
 
-[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4"]
+[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4" unique_id=1278874456]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="btnModule1" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4/PanelContainer"]
+[node name="btnModule1" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4/PanelContainer" unique_id=478236156]
 custom_minimum_size = Vector2(128, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -202,14 +202,14 @@ size_flags_vertical = 4
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PanelContainer2" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4"]
+[node name="PanelContainer2" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4" unique_id=1964872897]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="btnModule2" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4/PanelContainer2"]
+[node name="btnModule2" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4/PanelContainer2" unique_id=630704135]
 custom_minimum_size = Vector2(128, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -217,17 +217,17 @@ size_flags_vertical = 4
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer"]
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer" unique_id=1129028776]
 layout_mode = 2
 
-[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer7"]
+[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer7" unique_id=1386266546]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="btnModule3" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer7/PanelContainer"]
+[node name="btnModule3" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer7/PanelContainer" unique_id=2011655457]
 custom_minimum_size = Vector2(128, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -235,14 +235,14 @@ size_flags_vertical = 4
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PanelContainer2" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer7"]
+[node name="PanelContainer2" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer7" unique_id=926079602]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="btnModule4" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer7/PanelContainer2"]
+[node name="btnModule4" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer7/PanelContainer2" unique_id=590459975]
 custom_minimum_size = Vector2(128, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -250,17 +250,17 @@ size_flags_vertical = 4
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer"]
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer" unique_id=1874523113]
 layout_mode = 2
 
-[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer6"]
+[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer6" unique_id=133290460]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="btnModule5" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer6/PanelContainer"]
+[node name="btnModule5" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer6/PanelContainer" unique_id=1041367844]
 custom_minimum_size = Vector2(128, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -268,14 +268,14 @@ size_flags_vertical = 4
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PanelContainer2" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer6"]
+[node name="PanelContainer2" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer6" unique_id=101748225]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="btnModule6" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer6/PanelContainer2"]
+[node name="btnModule6" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer6/PanelContainer2" unique_id=1803655612]
 custom_minimum_size = Vector2(128, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -283,17 +283,17 @@ size_flags_vertical = 4
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer" unique_id=1699994616]
 layout_mode = 2
 
-[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer5"]
+[node name="PanelContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer5" unique_id=1444506852]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="btnModule7" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer5/PanelContainer"]
+[node name="btnModule7" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer5/PanelContainer" unique_id=422548825]
 custom_minimum_size = Vector2(128, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -301,14 +301,14 @@ size_flags_vertical = 4
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PanelContainer2" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer5"]
+[node name="PanelContainer2" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer5" unique_id=1833456776]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="btnModule8" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer5/PanelContainer2"]
+[node name="btnModule8" type="TextureButton" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer5/PanelContainer2" unique_id=1489520045]
 custom_minimum_size = Vector2(128, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -316,59 +316,59 @@ size_flags_vertical = 4
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer" unique_id=1342435484]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/MarginContainer"]
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/MarginContainer" unique_id=877178974]
 layout_mode = 2
 
-[node name="btnModuleLeft" type="Button" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/MarginContainer/HBoxContainer8"]
+[node name="btnModuleLeft" type="Button" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/MarginContainer/HBoxContainer8" unique_id=1096509352]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "<<"
 
-[node name="btnModulePage" type="Button" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/MarginContainer/HBoxContainer8"]
+[node name="btnModulePage" type="Button" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/MarginContainer/HBoxContainer8" unique_id=326344771]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "1"
 
-[node name="btnModuleRight" type="Button" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/MarginContainer/HBoxContainer8"]
+[node name="btnModuleRight" type="Button" parent="VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/MarginContainer/HBoxContainer8" unique_id=522963523]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = ">>"
 
-[node name="TextChat" parent="VBoxContainer/Main/Modules" instance=ExtResource("3_swi1v")]
+[node name="TextChat" parent="VBoxContainer/Main/Modules" unique_id=1674491953 instance=ExtResource("3_swi1v")]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="VBoxContainer" parent="VBoxContainer/Main"]
+[node name="Label" type="VBoxContainer" parent="VBoxContainer/Main" unique_id=1895171156]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Main/Label"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Main/Label" unique_id=277054762]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/Main/Label/HBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/Main/Label/HBoxContainer" unique_id=1411329993]
 custom_minimum_size = Vector2(310, 375)
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 
-[node name="Messages" type="MarginContainer" parent="VBoxContainer/Main/Label/HBoxContainer/PanelContainer2"]
+[node name="Messages" type="MarginContainer" parent="VBoxContainer/Main/Label/HBoxContainer/PanelContainer2" unique_id=506786060]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="txtMessages" type="RichTextLabel" parent="VBoxContainer/Main/Label/HBoxContainer/PanelContainer2/Messages"]
+[node name="txtMessages" type="RichTextLabel" parent="VBoxContainer/Main/Label/HBoxContainer/PanelContainer2/Messages" unique_id=1009478496]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
@@ -376,45 +376,45 @@ theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "Messages..."
 
-[node name="VSeparator" type="VSeparator" parent="VBoxContainer/Main/Label/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/Main/Label/HBoxContainer" unique_id=1536949756]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_44d2v")
 
-[node name="Label" type="Label" parent="VBoxContainer/Main/Label"]
+[node name="Label" type="Label" parent="VBoxContainer/Main/Label" unique_id=444453144]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Main/Label"]
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Main/Label" unique_id=1424301222]
 layout_mode = 2
 
-[node name="VBoxContainer" type="MarginContainer" parent="VBoxContainer/Main/Label/PanelContainer"]
+[node name="VBoxContainer" type="MarginContainer" parent="VBoxContainer/Main/Label/PanelContainer" unique_id=984623260]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/Main/Label/PanelContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Main/Label/PanelContainer/VBoxContainer" unique_id=502492621]
 custom_minimum_size = Vector2(0, 31)
 layout_mode = 2
 size_flags_vertical = 1
 
-[node name="HBoxContainer7" type="VBoxContainer" parent="VBoxContainer/Main"]
+[node name="HBoxContainer7" type="VBoxContainer" parent="VBoxContainer/Main" unique_id=1198651574]
 custom_minimum_size = Vector2(340, 0)
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Main/HBoxContainer7"]
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Main/HBoxContainer7" unique_id=1503537501]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Messages" type="MarginContainer" parent="VBoxContainer/Main/HBoxContainer7/PanelContainer"]
+[node name="Messages" type="MarginContainer" parent="VBoxContainer/Main/HBoxContainer7/PanelContainer" unique_id=2088021593]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="txtMessages" type="RichTextLabel" parent="VBoxContainer/Main/HBoxContainer7/PanelContainer/Messages"]
+[node name="txtMessages" type="RichTextLabel" parent="VBoxContainer/Main/HBoxContainer7/PanelContainer/Messages" unique_id=136247480]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 16
@@ -422,110 +422,110 @@ bbcode_enabled = true
 text = "Messages..."
 scroll_following = true
 
-[node name="TabContainer" type="PanelContainer" parent="VBoxContainer/Main/HBoxContainer7"]
+[node name="TabContainer" type="PanelContainer" parent="VBoxContainer/Main/HBoxContainer7" unique_id=988538024]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer" unique_id=59961941]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer" unique_id=1631826370]
 layout_mode = 2
 
-[node name="VBoxContainer1" type="VBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer1" type="VBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer" unique_id=991861750]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="C21" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+[node name="C21" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer1" unique_id=1140106787]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "ONE"
 
-[node name="C24" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+[node name="C24" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer1" unique_id=972651122]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "FOUR"
 
-[node name="C27" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+[node name="C27" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer1" unique_id=37263724]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "SEVEN"
 
-[node name="C210" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+[node name="C210" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer1" unique_id=1608260089]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "TEN"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer" unique_id=484327433]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="C22" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="C22" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1412340651]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "TWO"
 
-[node name="C25" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="C25" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1213227593]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "FIVE"
 
-[node name="C28" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="C28" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=808841763]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "EIGHT"
 
-[node name="Label3" type="Label" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="Label3" type="Label" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=831302903]
 custom_minimum_size = Vector2(0, 39)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer" unique_id=2102648580]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="C23" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="C23" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=1825919451]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "THREE"
 
-[node name="C26" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="C26" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=742848172]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "SIX"
 
-[node name="C29" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="C29" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=366167762]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "NINE"
 
-[node name="C211" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="C211" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=1647358338]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "NO-ONE"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer" unique_id=1371197399]
 layout_mode = 2
 
-[node name="C2Yes" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer2"]
+[node name="C2Yes" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer2" unique_id=2096186287]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "YES"
 
-[node name="C2Done" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer2"]
+[node name="C2Done" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer2" unique_id=1307809410]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -533,30 +533,31 @@ disabled = true
 text = "DONE"
 clip_text = true
 
-[node name="C2No" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer2"]
+[node name="C2No" type="Button" parent="VBoxContainer/Main/HBoxContainer7/TabContainer/VBoxContainer/HBoxContainer2" unique_id=153316472]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "NO"
 
-[node name="Label2" type="Label" parent="VBoxContainer/Main/HBoxContainer7"]
+[node name="Label2" type="Label" parent="VBoxContainer/Main/HBoxContainer7" unique_id=1234141849]
 layout_mode = 2
 size_flags_vertical = 1
 
-[node name="Label3" type="Label" parent="VBoxContainer/Main/HBoxContainer7"]
+[node name="Label3" type="Label" parent="VBoxContainer/Main/HBoxContainer7" unique_id=268935244]
 layout_mode = 2
 size_flags_vertical = 1
 
-[node name="btnQuit" type="Button" parent="VBoxContainer/Main/HBoxContainer7"]
+[node name="btnQuit" type="Button" parent="VBoxContainer/Main/HBoxContainer7" unique_id=1188116344]
 custom_minimum_size = Vector2(0, 61)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "QUIT GAME"
 
-[node name="Dialog" type="ConfirmationDialog" parent="."]
+[node name="Dialog" type="ConfirmationDialog" parent="." unique_id=900283891]
 oversampling_override = 1.0
+initial_position = 1
 size = Vector2i(244, 100)
 theme = ExtResource("1_oapnj")
 dialog_text = "Are you sure?"

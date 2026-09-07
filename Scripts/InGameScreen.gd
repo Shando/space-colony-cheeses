@@ -1655,6 +1655,10 @@ func updateButtons():
 
 		Globals.iButtons = iT
 		disableBtnCon(false, iT)
+	else:
+		btnLeft.disabled = true
+		btnPage.disabled = true
+		btnRight.disabled = true
 
 func setMods(bIn = true):
 	if bIn:
@@ -1682,7 +1686,7 @@ func _on_dialog_confirmed() -> void:
 	sfx.play()
 
 	if Globals.bStarted:
-		GDSync.call_func(Globals.playerQuit, [Globals.iMyPN])
+		GDSync.call_func(Functions.playerQuit, [Globals.iMyPN])
 
 	GDSync.quit()
 

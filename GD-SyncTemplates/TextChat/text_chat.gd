@@ -19,8 +19,8 @@ static var last_lobby : String = ""
 var _current_typing_channel : int
 var _listening_channels : Array = []
 var _typing : bool = false
-
 var _template_message : Node
+var sfx
 
 func _ready():
 	_template_message = %TemplateMessage
@@ -119,8 +119,14 @@ func _receive_message(text : String, channel : int, from : int, from_save : bool
 	if not _listening_channels.has(channel): 
 		return
 
-	$SFX.stream = Globals.sfx_msg
-	$SFX.play()
+	sfx = get_node_or_null("root/Spatial/Sfx")
+
+	if sfx == null:
+		sfx = get_node_or_null("/root/Lobby/SFX")
+
+	if sfx != null:
+		sfx.stream = Globals.sfx_msg
+		sfx.play()
 
 	if keep_messages_between_scenes and not from_save:
 		saved_messages.append([text, channel, from])

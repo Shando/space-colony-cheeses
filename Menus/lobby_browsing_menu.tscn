@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxv3um0nt0768"]
+[gd_scene format=3 uid="uid://dxv3um0nt0768"]
 
 [ext_resource type="PackedScene" uid="uid://8qy4jenu2w1m" path="res://GD-SyncTemplates/LobbyBrowser/lobby_browser.tscn" id="1_dgkn0"]
 [ext_resource type="Script" uid="uid://b6hsyv1esr3xj" path="res://Menus/lobby_browsing_menu.gd" id="1_q6obi"]
@@ -25,7 +25,7 @@ bg_color = Color(0.176471, 0.176471, 0.176471, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eq4yv"]
 texture = ExtResource("3_o6ups")
 
-[node name="LobbyBrowsingMenu" type="Control"]
+[node name="LobbyBrowsingMenu" type="Control" unique_id=1475401639]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +34,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q6obi")
 
-[node name="LobbyBrowser" type="PanelContainer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=658857605]
+stream = ExtResource("9_5ebge")
+bus = &"Music"
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1249068846]
+bus = &"SFX"
+
+[node name="LobbyBrowser" type="PanelContainer" parent="." unique_id=499529328]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,10 +51,10 @@ grow_vertical = 2
 theme = ExtResource("3_2opek")
 theme_override_styles/panel = SubResource("StyleBoxTexture_p05jg")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LobbyBrowser"]
+[node name="VBoxContainer" type="VBoxContainer" parent="LobbyBrowser" unique_id=1121485837]
 layout_mode = 2
 
-[node name="Header" type="Label" parent="LobbyBrowser/VBoxContainer"]
+[node name="Header" type="Label" parent="LobbyBrowser/VBoxContainer" unique_id=1832125112]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -56,20 +63,20 @@ theme_override_font_sizes/font_size = 64
 text = "SPACE COLONY CHEESES II"
 horizontal_alignment = 1
 
-[node name="LobbyBrowser" parent="LobbyBrowser/VBoxContainer" instance=ExtResource("1_dgkn0")]
+[node name="LobbyBrowser" parent="LobbyBrowser/VBoxContainer" unique_id=64321736 instance=ExtResource("1_dgkn0")]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label2" type="Label" parent="LobbyBrowser/VBoxContainer"]
+[node name="Label2" type="Label" parent="LobbyBrowser/VBoxContainer" unique_id=1888587035]
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="LobbyBrowser/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="LobbyBrowser/VBoxContainer" unique_id=1909126194]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LobbyBrowser/VBoxContainer/CenterContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LobbyBrowser/VBoxContainer/CenterContainer" unique_id=677080143]
 layout_mode = 2
 
-[node name="Join Manual" type="Button" parent="LobbyBrowser/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="Join Manual" type="Button" parent="LobbyBrowser/VBoxContainer/CenterContainer/HBoxContainer" unique_id=1102251869]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 theme = ExtResource("3_2opek")
@@ -77,7 +84,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "JOIN MANUAL"
 
-[node name="CreateLobby" type="Button" parent="LobbyBrowser/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="CreateLobby" type="Button" parent="LobbyBrowser/VBoxContainer/CenterContainer/HBoxContainer" unique_id=109566250]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 theme = ExtResource("3_2opek")
@@ -85,7 +92,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "CREATE LOBBY"
 
-[node name="Back" type="Button" parent="LobbyBrowser/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="Back" type="Button" parent="LobbyBrowser/VBoxContainer/CenterContainer/HBoxContainer" unique_id=2127833308]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 theme = ExtResource("3_2opek")
@@ -93,10 +100,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "BACK"
 
-[node name="Label" type="Label" parent="LobbyBrowser/VBoxContainer"]
+[node name="Label" type="Label" parent="LobbyBrowser/VBoxContainer" unique_id=1266660607]
 layout_mode = 2
 
-[node name="LobbyCreator" type="PanelContainer" parent="."]
+[node name="LobbyCreator" type="PanelContainer" parent="." unique_id=719641834]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -109,11 +116,11 @@ theme = ExtResource("3_2opek")
 theme_override_styles/panel = SubResource("StyleBoxTexture_dxreq")
 script = ExtResource("4_vxmqb")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LobbyCreator"]
+[node name="VBoxContainer" type="VBoxContainer" parent="LobbyCreator" unique_id=556434673]
 layout_mode = 2
 alignment = 1
 
-[node name="Header" type="Label" parent="LobbyCreator/VBoxContainer"]
+[node name="Header" type="Label" parent="LobbyCreator/VBoxContainer" unique_id=468387877]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -122,57 +129,57 @@ theme_override_font_sizes/font_size = 64
 text = "SPACE COLONY CHEESES II"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LobbyCreator/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="LobbyCreator/VBoxContainer" unique_id=1875170864]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 alignment = 1
 
-[node name="WidthSpacer" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="WidthSpacer" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=1025332869]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 
-[node name="Spacer4" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="Spacer4" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=352746969]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
-[node name="LobbyNameTitle" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="LobbyNameTitle" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=1704011680]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Lobby Name (3 - 32 Characters)"
 
-[node name="LobbyName" type="LineEdit" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="LobbyName" type="LineEdit" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=1624146386]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Spacer1" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="Spacer1" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=789723411]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
-[node name="PasswordTitle" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="PasswordTitle" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=1426517841]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Password (3 - 16 Characters)
 "
 
-[node name="Password" type="LineEdit" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="Password" type="LineEdit" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=1905560729]
 unique_name_in_owner = true
 layout_mode = 2
 placeholder_text = "(Optional)"
 
-[node name="Spacer2" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="Spacer2" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=2136937241]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
-[node name="PlayerLimitTitle" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="PlayerLimitTitle" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=172636568]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Player Limit (2 - 4)"
 
-[node name="PlayerLimit" type="SpinBox" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="PlayerLimit" type="SpinBox" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=1776536820]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_5ebge")
@@ -183,25 +190,25 @@ value = 4.0
 suffix = "players"
 select_all_on_focus = true
 
-[node name="Spacer3" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="Spacer3" type="Control" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=1407129826]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
-[node name="Visibility" type="HBoxContainer" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="Visibility" type="HBoxContainer" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=733835537]
 layout_mode = 2
 
-[node name="Visible" type="CheckButton" parent="LobbyCreator/VBoxContainer/VBoxContainer/Visibility"]
+[node name="Visible" type="CheckButton" parent="LobbyCreator/VBoxContainer/VBoxContainer/Visibility" unique_id=922033257]
 unique_name_in_owner = true
 layout_mode = 2
 button_pressed = true
 
-[node name="Label" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer/Visibility"]
+[node name="Label" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer/Visibility" unique_id=676793973]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Publicly Visible"
 
-[node name="CreateMessage" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer"]
+[node name="CreateMessage" type="Label" parent="LobbyCreator/VBoxContainer/VBoxContainer" unique_id=2137307880]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
@@ -210,11 +217,11 @@ theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LobbyCreator/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LobbyCreator/VBoxContainer" unique_id=1399797170]
 layout_mode = 2
 alignment = 1
 
-[node name="Create" type="Button" parent="LobbyCreator/VBoxContainer/HBoxContainer"]
+[node name="Create" type="Button" parent="LobbyCreator/VBoxContainer/HBoxContainer" unique_id=1623185565]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 theme = ExtResource("3_2opek")
@@ -222,7 +229,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "CREATE"
 
-[node name="Back" type="Button" parent="LobbyCreator/VBoxContainer/HBoxContainer"]
+[node name="Back" type="Button" parent="LobbyCreator/VBoxContainer/HBoxContainer" unique_id=19472426]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 theme = ExtResource("3_2opek")
@@ -230,10 +237,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "BACK"
 
-[node name="Label" type="Label" parent="LobbyCreator/VBoxContainer"]
+[node name="Label" type="Label" parent="LobbyCreator/VBoxContainer" unique_id=1921206068]
 layout_mode = 2
 
-[node name="LobbyJoiner" type="PanelContainer" parent="."]
+[node name="LobbyJoiner" type="PanelContainer" parent="." unique_id=2001328743]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -246,11 +253,11 @@ theme = ExtResource("3_2opek")
 theme_override_styles/panel = SubResource("StyleBoxTexture_eq4yv")
 script = ExtResource("5_org80")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LobbyJoiner"]
+[node name="VBoxContainer" type="VBoxContainer" parent="LobbyJoiner" unique_id=1185190431]
 layout_mode = 2
 alignment = 1
 
-[node name="Header" type="Label" parent="LobbyJoiner/VBoxContainer"]
+[node name="Header" type="Label" parent="LobbyJoiner/VBoxContainer" unique_id=1031457600]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -259,50 +266,50 @@ theme_override_font_sizes/font_size = 64
 text = "SPACE COLONY CHEESES II"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LobbyJoiner/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="LobbyJoiner/VBoxContainer" unique_id=749511781]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 alignment = 1
 
-[node name="WidthSpacer" type="Control" parent="LobbyJoiner/VBoxContainer/VBoxContainer"]
+[node name="WidthSpacer" type="Control" parent="LobbyJoiner/VBoxContainer/VBoxContainer" unique_id=1426358762]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 
-[node name="JoinNameBox" type="VBoxContainer" parent="LobbyJoiner/VBoxContainer/VBoxContainer"]
+[node name="JoinNameBox" type="VBoxContainer" parent="LobbyJoiner/VBoxContainer/VBoxContainer" unique_id=196547143]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="LobbyNameTitle" type="Label" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinNameBox"]
+[node name="LobbyNameTitle" type="Label" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinNameBox" unique_id=1664933626]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0.133333, 1)
 theme_override_font_sizes/font_size = 24
 text = "Lobby Name"
 
-[node name="JoinName" type="LineEdit" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinNameBox"]
+[node name="JoinName" type="LineEdit" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinNameBox" unique_id=352377084]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Spacer1" type="Control" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinNameBox"]
+[node name="Spacer1" type="Control" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinNameBox" unique_id=1126092751]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="JoinPasswordBox" type="VBoxContainer" parent="LobbyJoiner/VBoxContainer/VBoxContainer"]
+[node name="JoinPasswordBox" type="VBoxContainer" parent="LobbyJoiner/VBoxContainer/VBoxContainer" unique_id=373892023]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="PasswordTitle" type="Label" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinPasswordBox"]
+[node name="PasswordTitle" type="Label" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinPasswordBox" unique_id=232192231]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0.133333, 1)
 theme_override_font_sizes/font_size = 24
 text = "Password
 "
 
-[node name="JoinPassword" type="LineEdit" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinPasswordBox"]
+[node name="JoinPassword" type="LineEdit" parent="LobbyJoiner/VBoxContainer/VBoxContainer/JoinPasswordBox" unique_id=31327124]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="JoinMessage" type="Label" parent="LobbyJoiner/VBoxContainer/VBoxContainer"]
+[node name="JoinMessage" type="Label" parent="LobbyJoiner/VBoxContainer/VBoxContainer" unique_id=366163754]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
@@ -311,11 +318,11 @@ theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LobbyJoiner/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LobbyJoiner/VBoxContainer" unique_id=2115056151]
 layout_mode = 2
 alignment = 1
 
-[node name="Join" type="Button" parent="LobbyJoiner/VBoxContainer/HBoxContainer"]
+[node name="Join" type="Button" parent="LobbyJoiner/VBoxContainer/HBoxContainer" unique_id=288147965]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
@@ -324,7 +331,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "JOIN"
 
-[node name="Back" type="Button" parent="LobbyJoiner/VBoxContainer/HBoxContainer"]
+[node name="Back" type="Button" parent="LobbyJoiner/VBoxContainer/HBoxContainer" unique_id=680825058]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 theme = ExtResource("3_2opek")
@@ -332,19 +339,12 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "BACK"
 
-[node name="Label" type="Label" parent="LobbyJoiner/VBoxContainer"]
+[node name="Label" type="Label" parent="LobbyJoiner/VBoxContainer" unique_id=1401569804]
 layout_mode = 2
 
-[node name="Help" parent="." instance=ExtResource("8_5ebge")]
+[node name="Help" parent="." unique_id=933683351 instance=ExtResource("8_5ebge")]
 visible = false
 layout_mode = 1
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_5ebge")
-bus = &"Music"
-
-[node name="SFX" type="AudioStreamPlayer" parent="."]
-bus = &"SFX"
 
 [connection signal="join_pressed" from="LobbyBrowser/VBoxContainer/LobbyBrowser" to="." method="_on_lobby_browser_join_pressed"]
 [connection signal="pressed" from="LobbyBrowser/VBoxContainer/CenterContainer/HBoxContainer/Join Manual" to="." method="_on_join_manual_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bn4mnuq1eslos"]
+[gd_scene format=3 uid="uid://bn4mnuq1eslos"]
 
 [ext_resource type="Script" uid="uid://diccs2yc7iiih" path="res://Menus/login_menu.gd" id="1_fx8uo"]
 [ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="1_vblgv"]
@@ -11,7 +11,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rpgx0"]
 texture = ExtResource("2_pt1f3")
 
-[node name="LoginMenu" type="Control"]
+[node name="LoginMenu" type="Control" unique_id=514752785]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,14 @@ grow_vertical = 2
 theme = ExtResource("1_vblgv")
 script = ExtResource("1_fx8uo")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=669560509]
+stream = ExtResource("7_xuf6d")
+bus = &"Music"
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=878506742]
+bus = &"SFX"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=919311121]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,10 +38,10 @@ grow_vertical = 2
 theme = ExtResource("1_vblgv")
 theme_override_styles/panel = SubResource("StyleBoxTexture_rpgx0")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1953995891]
 layout_mode = 2
 
-[node name="Header" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1900828907]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -43,14 +50,14 @@ theme_override_font_sizes/font_size = 64
 text = "SPACE COLONY CHEESES II"
 horizontal_alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer" unique_id=64097444]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer" unique_id=256932822]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=288319263]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 0, 1)
@@ -58,16 +65,9 @@ theme_override_font_sizes/font_size = 24
 text = "Login"
 horizontal_alignment = 1
 
-[node name="Login" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource("4_b7bqs")]
+[node name="Login" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" unique_id=1322401706 instance=ExtResource("4_b7bqs")]
 layout_mode = 2
 
-[node name="Help" parent="." instance=ExtResource("6_xuf6d")]
+[node name="Help" parent="." unique_id=836239562 instance=ExtResource("6_xuf6d")]
 visible = false
 layout_mode = 1
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_xuf6d")
-bus = &"Music"
-
-[node name="SFX" type="AudioStreamPlayer" parent="."]
-bus = &"SFX"

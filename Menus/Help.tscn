@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://boir4qp8fpp3b"]
+[gd_scene format=3 uid="uid://boir4qp8fpp3b"]
 
 [ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="1_msn5b"]
 [ext_resource type="Texture2D" uid="uid://bd1dudyjs6m5" path="res://Assets/Textures/crab_nasa.jpg" id="2_ao2vq"]
@@ -28,7 +28,7 @@ texture = ExtResource("2_ao2vq")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfy4c"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=49520199]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,11 +38,14 @@ grow_vertical = 2
 theme = ExtResource("1_msn5b")
 script = ExtResource("4")
 
-[node name="TextToSpeech" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1313334881]
+bus = &"SFX"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="TextToSpeech" type="AudioStreamPlayer" parent="." unique_id=1828815927]
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=48550687]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=234702664]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,10 +54,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_x7rmi")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1761341768]
 layout_mode = 2
 
-[node name="Header" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer" unique_id=462997933]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -63,26 +66,26 @@ theme_override_font_sizes/font_size = 64
 text = "SPACE COLONY CHEESES II"
 horizontal_alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer" unique_id=1144599300]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_bfy4c")
 
-[node name="HBoxContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer/PanelContainer" unique_id=16005964]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1128567196]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "CLICK HERE TO READ ALOUD"
 
-[node name="TabContainer" type="TabContainer" parent="PanelContainer/VBoxContainer"]
+[node name="TabContainer" type="TabContainer" parent="PanelContainer/VBoxContainer" unique_id=927370067]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 current_tab = 5
 
-[node name="Overview" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="Overview" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=867361503]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -90,7 +93,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Overview"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Overview" unique_id=1894314812]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_5vlgg")
 bbcode_enabled = true
@@ -104,7 +107,7 @@ Finally, last year saw one of the biggest NanoTech breakthroughs in history - th
 
 [b]Space Colony Cheeses II[/b] is a light-hearted, non-violent game for 2-4 Players, based on [b]Space Colony Cheeses[/b], a board game by [b]The Mad Game Designer (aka Michael Fischer)[/b] - http://www.cke1st.com/m_games1.htm."
 
-[node name="Introduction" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="Introduction" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=1572988759]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -112,7 +115,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Introduction"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Introduction" unique_id=1358383209]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -138,7 +141,7 @@ All of these modules must be connected to each other. Only the [b]Start-Up[/b] m
 
 Food is not a problem for your colony, since that is exactly what you are producing. As your colony makes commodities, they are kept track of on the scoreboard, as is your current bank balance."
 
-[node name="Game Sequence" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="Game Sequence" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=1049106894]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -146,7 +149,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Game Sequence"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Game Sequence" unique_id=1429837122]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_5vlgg")
 bbcode_enabled = true
@@ -174,7 +177,7 @@ text = "[b][font_size=24]IV. Game Sequence[/font_size][/b]
 
 11. Finally, all stored commodities, except for [b]Leather[/b] and [b]Manure[/b], are reset to zero."
 
-[node name="Modules I" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="Modules I" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=1537736109]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -182,24 +185,24 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I" unique_id=2025212534]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer" unique_id=353407283]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
 text = "   V. Colony Modules (Part 1)"
 scroll_active = false
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer" unique_id=1324184228]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer" unique_id=1153505783]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer/HBoxContainer" unique_id=995438805]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -207,7 +210,7 @@ size_flags_vertical = 0
 texture = ExtResource("5_5ifgo")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer/HBoxContainer" unique_id=523243862]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -217,13 +220,13 @@ text = "[b][font_size=24]Start-Up Modules aka Crystal Mines[/font_size][/b]
 [b](# Allowed = 1 - Cost = $20 - Cash Produced = $2 - Energy Produced = 2)[/b]
 These [b]must[/b] be the first modules built. However, they are quite expensive as they generate their own energy as well as a small amount of $."
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer" unique_id=1968402367]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer2" unique_id=632452730]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=1443842372]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -231,7 +234,7 @@ size_flags_vertical = 0
 texture = ExtResource("6_y0k4i")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=1732810897]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -242,13 +245,13 @@ text = "[b][font_size=24]Crystal Powerplant Modules[/font_size]
 These are the least expensive, and least powerful, energy source.
 "
 
-[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer" unique_id=295952896]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer3" unique_id=1107990585]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=2034707283]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -256,7 +259,7 @@ size_flags_vertical = 0
 texture = ExtResource("7_aewot")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=1806148074]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -267,13 +270,13 @@ text = "[b][font_size=24]Geothermal Powerplant Modules[/font_size]
 These produce more energy than the [b]Crystal Powerplant[/b], but can only be built on [b]Geothermal Steam[/b] grid units.
 "
 
-[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer"]
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer" unique_id=201195180]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer4" unique_id=946780250]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=391227372]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -281,7 +284,7 @@ size_flags_vertical = 0
 texture = ExtResource("8_ak8cw")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules I/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=888862104]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -292,7 +295,7 @@ text = "[b][font_size=24]Hub Modules[/font_size]
 These are special connectors. Any module adjacent to a [b]Hub[/b] is considered adjacent to any other modules that are also adjacent to the [b]Hub[/b].
 [b]NB: Hub[/b] modules use [b][color=red]no[/color][/b] energy."
 
-[node name="Modules II" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="Modules II" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=1787467068]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -300,31 +303,31 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II" unique_id=1269227255]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer" unique_id=6529029]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
 text = "   V. Colony Modules (Part 2)"
 scroll_active = false
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer" unique_id=97981838]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer" unique_id=440589128]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1783911419]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("9_3124t")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1632636205]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -335,20 +338,20 @@ text = "[b][font_size=24]Storage Modules[/font_size]
 These can store up to 10 units of [b]Butter[/b], [b]Cream[/b], [b]Ice Cream[/b], [b]Manure[/b] or [b]Milk[/b], which can be sold, along with the other commodities, at a [b]Portal[/b]. All commodity [b]Storage[/b] modules [b]must[/b] be adjacent to a [b]Processing Plant[/b].
 [b]NB:[/b] at the end of each turn, any remaining stored commodities (except [b]Leather[/b] and [b]Manure[/b]) spoil and [b]must[/b] be discarded with the relevant inventory dropping to 0."
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer" unique_id=1559069322]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer2" unique_id=566469125]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=307588351]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("10_8oajh")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=406499691]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -359,13 +362,13 @@ text = "[b][font_size=24]Storage Modules[/font_size]
 These can store up to 10 units of [b]Beef[/b], [b]Cheese[/b] or [b]Leather[/b], which can be sold, along with the other commodities, at a [b]Portal[/b]. All commodity [b]Storage[/b] modules must be adjacent to a [b]Processing Plant[/b].
 [b]NB:[/b] at the end of each turn, any remaining stored commodities (except [b]Leather[/b] and [b]Manure[/b]) spoil and [b]must[/b] be discarded with the relevant inventory dropping to 0."
 
-[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer" unique_id=1368462148]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer3" unique_id=281057303]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=513359548]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -373,7 +376,7 @@ size_flags_vertical = 0
 texture = ExtResource("11_kymbp")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=628185504]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -384,13 +387,13 @@ text = "[b][font_size=24]Barn Modules[/font_size]
 These support one herd of Nano-Cows, including all required feeding and milking equipment. They produce 5 commodity units per turn, or 7 if built on a [b]Lush Pasture[/b] grid unit.
 [b]NB: Barns must[/b] be adjacent to a [b]Processing Plant[/b]."
 
-[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer"]
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer" unique_id=1558445176]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer4" unique_id=1894299583]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=1365592531]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -398,7 +401,7 @@ size_flags_vertical = 0
 texture = ExtResource("12_0cw8n")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules II/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=1214492664]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -408,38 +411,38 @@ text = "[b][font_size=24]Mega-Barn Modules[/font_size]
 (# Allowed = 1 - Cost = $20 - Energy Required = 1 - Output = 10)[/b]
 These count as two [b]Barn[/b] modules for commodity output, and as one [b]Barn[/b] module for energy usage."
 
-[node name="Modules III" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="Modules III" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=201632772]
 layout_mode = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III" unique_id=1211282542]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer" unique_id=1861656565]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
 text = "   V. Colony Modules (Part 3)"
 scroll_active = false
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer" unique_id=1168362958]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer" unique_id=1261899973]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1008367547]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("13_siwld")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1538111844]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -450,20 +453,20 @@ text = "[b][font_size=24]Processing Plant Modules[/font_size]
 These turn the output from the herd into [b]Beef[/b], [b]Butter[/b], [b]Cheese[/b], [b]Cream[/b], [b]Ice Cream[/b], [b]Leather[/b], [b]Manure[/b] and/or [b]Milk[/b]. There is no limit on how many units of each commodity a [b]Processing Plant[/b] can make, except that there must be room in the [b]Storage[/b] modules for everything.
 [b]NB:[/b] Anything that will [b][color=red]not[/color][/b] fit in a [b]Storage[/b] module is lost and a [b]Processing Plant[/b] requires 2 units of energy per turn, [b][color=red]not[/color][/b] the usual 1."
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer" unique_id=1832173950]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer2" unique_id=846029709]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=18684899]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("14_dkh3c")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=1305654927]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -473,20 +476,20 @@ text = "[b][font_size=24]Pasture Dome Modules[/font_size]
 (# Allowed = 3 - Cost = $5 -  Energy Required = 1)[/b]
 These are enclosed grazing areas, which must be adjacent to a [b]Barn[/b] or [b]Megabarn[/b]. Bad things can happen if there is [b][color=red]not[/color][/b] at least one [b]Pasture Dome[/b] for each 3 [b]Barn's[/b] worth of Nano-Cows (count one [b]Megabarn[/b] as two [b]Barns[/b])."
 
-[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer" unique_id=1172852478]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer3" unique_id=132002293]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=1243852640]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("15_5vlgg")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=1510304119]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -496,13 +499,13 @@ text = "[b][font_size=24]Catalog Store Modules[/font_size]
 (# Allowed = 1 - Cost = $10 - Cash Produced = $10 - Energy Required = 1)[/b]
 These allow the selling of tasteful gift boxes of assorted Cheeses, Beef Sausages, and flavourless crackers, usually at higher prices than the [b]Cheese[/b] and [b]Beef[/b] alone would fetch. A [b]Catalog Store [color=red]cannot[/color][/b] function unless there is a working [b]Portal[/b] and at least one stored unit each of [b]Cheese[/b] and [b]Beef[/b]. Gift boxes are made of one [b]Cheese[/b] and one [b]Beef[/b] unit each, and usually sell for $10."
 
-[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer"]
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer" unique_id=249345827]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer4" unique_id=464922501]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=473933595]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -510,7 +513,7 @@ size_flags_vertical = 0
 texture = ExtResource("16_5fjcd")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules III/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=638887555]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -520,7 +523,7 @@ text = "[b][font_size=24]Habitation Modules[/font_size]
 (# Allowed = 1 - Cost = $5 - Energy Required = 1)[/b]
 These are living spaces for the workers of the colony, and are required for the colony to exceed 12 modules. In other words, the 13th module [b]must[/b] be a [b]Habitation[/b] module. Should this module be deprived of energy, then [b][color=red]no[/color][/b] more modules may be placed until it is functional again."
 
-[node name="Modules IV" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="Modules IV" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=1810646867]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -528,31 +531,31 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV" unique_id=1769419067]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer" unique_id=1016544831]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
 text = "   V. Colony Modules (Part 4)"
 scroll_active = false
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer" unique_id=510811919]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer" unique_id=356255174]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1111965202]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("17_dkh3c")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer/HBoxContainer" unique_id=48342503]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -562,20 +565,20 @@ text = "[b][font_size=24]Construction Modules[/font_size]
 (# Allowed = 1 - Cost = $10 - Energy Required = 1)[/b]
 These reduce the cost of new module construction by $1 per module, and allow the movement of one existing module, per turn, to another location. However, this movement is [b][color=red]not[/color][/b] free, and costs half of the original purchase price (fractions will be dropped)."
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer" unique_id=1382084613]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer2" unique_id=802054085]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=910144625]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("18_5vlgg")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=1878005708]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -585,20 +588,20 @@ text = "[b][font_size=24]Veterinary Modules[/font_size]
 (# Allowed = 1 - Cost = $10 - Energy Required = 1)[/b]
 These are packed full of the best Nano-Veterinarians in the Galaxy and give the colony a second chance to overcome diseases."
 
-[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer" unique_id=1656513198]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer3" unique_id=1894656842]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=926899949]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("19_5fjcd")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=330827331]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -608,20 +611,20 @@ text = "[b][font_size=24]Laboratory Modules[/font_size]
 (Cheese & Sausage - # Allowed = 1 of each - Cost = $10 - Cash Produced = $4 - Energy Required = 1)[/b]
 These generate $4 each turn through research into new flavours of Cheeses or Sausages, and will generate $ whether there is a functional [b]Portal[/b] or not."
 
-[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer"]
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer" unique_id=1439205183]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer4" unique_id=1719567977]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=682197567]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("20_2fbh6")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules IV/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=182962212]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -632,7 +635,7 @@ text = "[b][font_size=24]Law Office Modules[/font_size]
 These are full of greedy corporate lawyers who are eager to sue the udders off the competition. Each turn, a colony can choose to file a suit against another colony for infringement of grazing rights, a strawberry tort, or whatever else they can think of. All lawsuits are decided by the roll of a dice. If it comes up 1-4, multiply by 10, and that's what the colony receives in reparations. If it's a 5, the case was dismissed, and a 6 means the court found for the other colony, who [b]must[/b] be paid $25 in damages.
 [b]NB:[/b] A colony with less than $50 in the bank [b][color=red]cannot[/color][/b] be sued."
 
-[node name="Modules V" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="Modules V" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=521856662]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -640,31 +643,31 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 7
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules V"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules V" unique_id=1082856445]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer" unique_id=550157064]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
 text = "   V. Colony Modules (Part 5)"
 scroll_active = false
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer" unique_id=1504056824]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer/PanelContainer" unique_id=2032202284]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1314323240]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("21_2y568")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Modules V/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1949228726]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -675,7 +678,7 @@ text = "[b][font_size=24]Portal Modules[/font_size]
 These are required in order to trade with the rest of the Galaxy, via Bos III. Prices of the eight commodities are different each turn and for each colony. Each price is determined by a roll of the dice. The price of [b]Leather[/b] can never be higher than 3, and the price of [b]Manure[/b] is always 1.
 [b]NB:[/b] Random Events can override these limits."
 
-[node name="How to Win" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="How to Win" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=824763925]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -683,7 +686,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/How to Win"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/How to Win" unique_id=423893129]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -705,7 +708,7 @@ This can be repeated ad-infinitum, if you so desire, but has to be agreed to by 
 [b][font_size=24]G O O D    L U C K !!!![/font_size][/b]"
 scroll_active = false
 
-[node name="Keyboard and Mouse" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="Keyboard and Mouse" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=1327733227]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -713,7 +716,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 9
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Keyboard and Mouse"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/Keyboard and Mouse" unique_id=365113286]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_5vlgg")
 bbcode_enabled = true
@@ -738,7 +741,7 @@ Pressing the [b]RIGHT Mouse button[/b] whilst [b]moving the mouse[/b] rotates th
 "
 scroll_active = false
 
-[node name="About and Credits" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+[node name="About and Credits" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=1709175437]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
@@ -746,7 +749,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 25
 metadata/_tab_index = 10
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/About and Credits"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TabContainer/About and Credits" unique_id=578435229]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_5vlgg")
 bbcode_enabled = true
@@ -772,9 +775,6 @@ We have also used the [b]Universal Settings Plugin[/b] from [b]antzGames[/b] (ht
 
 
 [b]Copyright (c) Spinalsoft AU 2025[/b]"
-
-[node name="SFX" type="AudioStreamPlayer" parent="."]
-bus = &"SFX"
 
 [connection signal="draw" from="PanelContainer/VBoxContainer" to="." method="_on_VBoxContainer_draw"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]

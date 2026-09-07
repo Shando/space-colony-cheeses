@@ -1,22 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgbv7r0yrg4yk"]
+[gd_scene format=3 uid="uid://dgbv7r0yrg4yk"]
 
+[ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="1_qibxx"]
 [ext_resource type="Script" uid="uid://dqlmi7hfqm0x2" path="res://GD-SyncTemplates/TextChat/text_chat.gd" id="1_rkot3"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpmys"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.021375, 0.149625, 0.18524998, 1)
-border_color = Color(0.016199999, 0.1134, 0.14039999, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 3
-anti_aliasing = false
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3yebx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqrqq"]
 content_margin_left = 6.0
@@ -67,16 +52,17 @@ corner_radius_bottom_left = 10
 corner_detail = 3
 anti_aliasing = false
 
-[node name="TextChat" type="Control"]
+[node name="TextChat" type="Control" unique_id=695196618]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_qibxx")
 script = ExtResource("1_rkot3")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1791447072]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,40 +70,49 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=96408907]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer"]
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1511528710]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 16
+text = "Chat
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer" unique_id=477921860]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="MessageContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/ScrollContainer"]
+[node name="MessageContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/ScrollContainer" unique_id=387157164]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
 
-[node name="TemplateMessage" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer/MessageContainer"]
+[node name="TemplateMessage" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer/MessageContainer" unique_id=1530754613]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_kpmys")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3yebx")
+theme_override_font_sizes/normal_font_size = 14
 bbcode_enabled = true
 text = "[Channel][Username] Test message"
 fit_content = true
 scroll_active = false
 scroll_following = true
+scroll_following_visible_characters = true
 
-[node name="TypingContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+[node name="TypingContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1084329653]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_stretch_ratio = 0.2
 
-[node name="TextEdit" type="TextEdit" parent="PanelContainer/VBoxContainer/TypingContainer"]
+[node name="TextEdit" type="TextEdit" parent="PanelContainer/VBoxContainer/TypingContainer" unique_id=533460406]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

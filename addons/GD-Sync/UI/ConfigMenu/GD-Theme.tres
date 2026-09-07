@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=19 format=3 uid="uid://5whm1igkt23h"]
+[gd_resource type="Theme" format=3 uid="uid://5whm1igkt23h"]
 
 [ext_resource type="FontFile" uid="uid://p1vs0hic5xim" path="res://Fonts/NotoSans-Bold.ttf" id="1_g3h2g"]
 [ext_resource type="FontFile" uid="uid://ch2aef1jex81f" path="res://DemoPage/Fonts/Montserrat-Bold.ttf" id="2_d26q0"]

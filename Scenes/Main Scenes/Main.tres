@@ -1,4 +1,4 @@
-[gd_resource type="Environment" load_steps=5 format=3 uid="uid://d357xepy4p56q"]
+[gd_resource type="Environment" format=3 uid="uid://d357xepy4p56q"]
 
 [ext_resource type="Texture2D" uid="uid://bd1dudyjs6m5" path="res://Assets/Textures/crab_nasa.jpg" id="1_o6i3a"]
 

@@ -3,7 +3,7 @@ extends Node
 var voices = []
 var voiceID = 0
 var voiceVolume = 50
-var tProfanity = []
+var dProfanity = {}
 
 # Call to get list of all available voices
 # Returns an Array of voice information dictionaries.
@@ -56,16 +56,15 @@ func loadProfanityData():
 	var json = JSON.new()
 	var _tSett = json.parse(myData_file.get_as_text())
 	myData_file.close()
-	tProfanity = json.data
+
+	for prof in json.data:
+		dProfanity[prof.word] = true
 
 func checkProfanity(inTxt):
-	var bProfanity = false
-	var sTxt = inTxt.to_lower()
-	var tSplit = sTxt.split(" ")
+	var wordsInText = inTxt.to_lower().split(" ", false)
 
-	for x in tSplit:
-		for y in tProfanity:
-			if y.word == x:
-				bProfanity = true
+	for word in wordsInText:
+		if dProfanity.has(word):
+			return true
 
-	return bProfanity
+	return false
