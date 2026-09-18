@@ -3,13 +3,12 @@ extends Control
 signal join_pressed(lobby_name : String, has_password : bool)
 
 var LABEL_SCENE : PackedScene = preload("res://GD-SyncTemplates/LobbyBrowser/lobby_label.tscn")
+var last_refresh : float = 0
 
 @onready var lobby_list : Control = %LobbyList
 
 func _ready():
 	GDSync.lobbies_received.connect(lobbies_received)
-
-var last_refresh : float = 0
 
 func _process(_delta):
 	var current_time : float = Time.get_unix_time_from_system()

@@ -34,14 +34,14 @@ func _on_create_pressed():
 		else:
 			$"../SFX".stream = Globals.sfx_error
 			$"../SFX".play()
-			#%CreateMessage.modulate = Color.INDIAN_RED
+			%CreateMessage.modulate = Color.INDIAN_RED
 			%CreateMessage.text = "Lobby name appears to include Profanity! Please try again."
 
 func lobby_created(lobby_name : String):
 	%LobbyJoiner.join_instant(lobby_name, %Password.text)
 
 func lobby_creation_failed(lobby_name : String, error : int):
-	#%CreateMessage.modulate = Color.INDIAN_RED
+	%CreateMessage.modulate = Color.INDIAN_RED
 	$"../SFX".stream = Globals.sfx_error
 	$"../SFX".play()
 

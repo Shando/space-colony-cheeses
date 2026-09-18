@@ -95,6 +95,8 @@ var tCatalog = [false, false, false, false, false]
 var tCheeseLab = [false, false, false, false, false]
 # tConstruction = Does Player have a Construction Module? [1 - 4] = true or false
 var tConstruction = [false, false, false, false, false]
+# tHabitation = Does Player have a Habitation Module? [1 - 4] = true or false
+var tHabitation = [false, false, false, false, false]
 # tModels = Contains Godot ID of Building at Location
 var tModels = [
 	[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
@@ -1376,6 +1378,8 @@ var tStorage = [
 	{"beef": 0, "butter": 0, "cheese": 0, "cream": 0, "icecream": 0, "leather": 0, "manure": 0, "milk": 0},
 	{"beef": 0, "butter": 0, "cheese": 0, "cream": 0, "icecream": 0, "leather": 0, "manure": 0, "milk": 0}
 	]			#{"beef": 0, "butter": 0, "cheese": 0, "cream": 0, "icecream": 0, "leather": 0, "manure": 0, "milk": 0} for each player [1 - 4]
+# tVeterinary = Does Player have a Veterinary? [1 - 4] = true or false
+var tVeterinary = [false, false, false, false, false]
 # tWords = Numbers 1 - 10 as Words
 var tWords = [
 	"Zero (0)",
@@ -1865,6 +1869,7 @@ func updateiWait(inWait):
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.keycode == KEY_F1 and not event.is_echo() and event.is_pressed():
+			# Settings Menu
 			Sfx.stream = Globals.sfx_click
 			Sfx.play()
 
@@ -1876,6 +1881,7 @@ func _input(event: InputEvent) -> void:
 			else:
 				help.visible = true
 		elif event.keycode == KEY_F2 and not event.is_echo() and event.is_pressed():
+			# Help
 			Sfx.stream = Globals.sfx_click
 			Sfx.play()
 
@@ -1887,12 +1893,14 @@ func _input(event: InputEvent) -> void:
 			else:
 				UniversalSettings.show_screen()
 		elif event.keycode == KEY_F3 and not event.is_echo() and event.is_pressed():
+			# Stop Speech
 			Sfx.stream = Globals.sfx_click
 			Sfx.play()
 
 			if TTS.is_speaking():
 				TTS.stop()
 		elif event.keycode == KEY_F12 and not event.is_echo() and event.is_pressed():
+			# Quit Game Popup
 			Sfx.stream = Globals.sfx_click
 			Sfx.play()
 			btnOK.visible = false

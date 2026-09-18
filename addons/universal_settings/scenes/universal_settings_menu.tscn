@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b6sy572h06xqn"]
+[gd_scene format=3 uid="uid://b6sy572h06xqn"]
 
 [ext_resource type="Script" uid="uid://nvr3yg2dxv78" path="res://addons/universal_settings/scenes/universal_settings_menu.gd" id="1_c2d6w"]
 [ext_resource type="Theme" uid="uid://5whm1igkt23h" path="res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres" id="1_yn7kg"]
@@ -15,7 +15,7 @@ texture = ExtResource("3_0rip6")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0rip6"]
 
-[node name="UniversalSettingsMenu" type="ColorRect"]
+[node name="UniversalSettingsMenu" type="ColorRect" unique_id=167806797]
 process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c2d6w")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=562055708]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,10 +36,10 @@ size_flags_vertical = 3
 theme = ExtResource("1_yn7kg")
 theme_override_styles/panel = SubResource("StyleBoxTexture_nsxbx")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer" unique_id=124269320]
 layout_mode = 2
 
-[node name="Header" type="Label" parent="PanelContainer/VBoxContainer2"]
+[node name="Header" type="Label" parent="PanelContainer/VBoxContainer2" unique_id=611473622]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -48,32 +48,30 @@ theme_override_font_sizes/font_size = 64
 text = "SPACE COLONY CHEESES II"
 horizontal_alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer2"]
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer2" unique_id=1725380068]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer" unique_id=458717425]
 custom_minimum_size = Vector2(570, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 10
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer" unique_id=175482637]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Settings"
 
-[node name="TabContainer" type="TabContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer"]
+[node name="TabContainer" type="TabContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer" unique_id=852547511]
 custom_minimum_size = Vector2(500, 350)
 layout_mode = 2
-current_tab = 1
-all_tabs_in_front = true
+current_tab = 0
 tab_focus_mode = 0
 
-[node name="Graphics" type="TabBar" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer"]
-visible = false
+[node name="Graphics" type="TabBar" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer" unique_id=1133247111]
 layout_mode = 2
 focus_mode = 0
 theme_override_font_sizes/font_size = 36
@@ -82,7 +80,7 @@ clip_tabs = false
 scroll_to_selected = false
 metadata/_tab_index = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics" unique_id=566970271]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -91,22 +89,22 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 6
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer" unique_id=435275726]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_7qv6v")
 
-[node name="MonitorContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer"]
+[node name="MonitorContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer" unique_id=1050242365]
 layout_mode = 2
 
-[node name="MonitorLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/MonitorContainer"]
+[node name="MonitorLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/MonitorContainer" unique_id=261948169]
 custom_minimum_size = Vector2(225, 0)
 layout_mode = 2
 text = "Monitor:"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="MonitorButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/MonitorContainer" groups=["Button"]]
+[node name="MonitorButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/MonitorContainer" unique_id=1504832595 groups=["Button"]]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -120,17 +118,17 @@ popup/item_0/id = 0
 popup/item_1/text = "Monitor 1"
 popup/item_1/id = 1
 
-[node name="WindowModeContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer"]
+[node name="WindowModeContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer" unique_id=1370665929]
 layout_mode = 2
 
-[node name="WindowModeLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/WindowModeContainer"]
+[node name="WindowModeLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/WindowModeContainer" unique_id=80913290]
 custom_minimum_size = Vector2(225, 0)
 layout_mode = 2
 text = "Display Mode:"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="WindowModeButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/WindowModeContainer" groups=["Button"]]
+[node name="WindowModeButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/WindowModeContainer" unique_id=489818717 groups=["Button"]]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -138,17 +136,17 @@ size_flags_vertical = 3
 focus_mode = 0
 fit_to_longest_item = false
 
-[node name="ResolutionContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer"]
+[node name="ResolutionContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer" unique_id=1776200163]
 layout_mode = 2
 
-[node name="ResolutionLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/ResolutionContainer"]
+[node name="ResolutionLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/ResolutionContainer" unique_id=1255138802]
 custom_minimum_size = Vector2(225, 0)
 layout_mode = 2
 text = "Window Size:"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="ResolutionOptionButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/ResolutionContainer" groups=["Button"]]
+[node name="ResolutionOptionButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/ResolutionContainer" unique_id=1343091267 groups=["Button"]]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -156,17 +154,17 @@ size_flags_vertical = 3
 focus_mode = 0
 fit_to_longest_item = false
 
-[node name="MSAAContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer"]
+[node name="MSAAContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer" unique_id=1722482070]
 layout_mode = 2
 
-[node name="MSAALabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/MSAAContainer"]
+[node name="MSAALabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/MSAAContainer" unique_id=877271278]
 custom_minimum_size = Vector2(225, 0)
 layout_mode = 2
 text = "MSAA:"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="MSAAOptionButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/MSAAContainer" groups=["Button"]]
+[node name="MSAAOptionButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/MSAAContainer" unique_id=1963056557 groups=["Button"]]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -187,17 +185,17 @@ popup/item_2/id = 2
 popup/item_3/text = "8x"
 popup/item_3/id = 3
 
-[node name="FSRContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer"]
+[node name="FSRContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer" unique_id=518564553]
 layout_mode = 2
 
-[node name="FSRLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/FSRContainer"]
+[node name="FSRLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/FSRContainer" unique_id=773697705]
 custom_minimum_size = Vector2(225, 0)
 layout_mode = 2
 text = "Scaling Mode:"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="FSROptionButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/FSRContainer" groups=["Button"]]
+[node name="FSROptionButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/FSRContainer" unique_id=1462360109 groups=["Button"]]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -219,10 +217,10 @@ popup/item_1/id = 1
 popup/item_2/text = "FSR 2.2"
 popup/item_2/id = 2
 
-[node name="3DScaleContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer"]
+[node name="3DScaleContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer" unique_id=1004178968]
 layout_mode = 2
 
-[node name="3DScaleLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/3DScaleContainer"]
+[node name="3DScaleLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/3DScaleContainer" unique_id=529401576]
 custom_minimum_size = Vector2(225, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -230,7 +228,7 @@ text = "Scaling:"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="3DScaleSlider" type="HSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/3DScaleContainer"]
+[node name="3DScaleSlider" type="HSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/3DScaleContainer" unique_id=1812559168]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -247,19 +245,19 @@ max_value = 4.0
 value = 4.0
 tick_count = 5
 
-[node name="Scale3DLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/3DScaleContainer"]
+[node name="Scale3DLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/3DScaleContainer" unique_id=1474892053]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "100%"
 vertical_alignment = 1
 
-[node name="AAContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer"]
+[node name="AAContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer" unique_id=742189868]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="FXAACheckBox" type="CheckButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/AAContainer" groups=["Button"]]
+[node name="FXAACheckBox" type="CheckButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/AAContainer" unique_id=1111043051 groups=["Button"]]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
@@ -271,7 +269,7 @@ action_mode = 0
 text = "FXAA:"
 alignment = 2
 
-[node name="TAACheckBox" type="CheckButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/AAContainer" groups=["Button"]]
+[node name="TAACheckBox" type="CheckButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/AAContainer" unique_id=1978094111 groups=["Button"]]
 custom_minimum_size = Vector2(155, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -287,7 +285,7 @@ action_mode = 0
 text = "TAA:"
 alignment = 2
 
-[node name="VSyncCheckBox" type="CheckButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/AAContainer" groups=["Button"]]
+[node name="VSyncCheckBox" type="CheckButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer/AAContainer" unique_id=251344594 groups=["Button"]]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -303,16 +301,17 @@ action_mode = 0
 text = "VSync:"
 alignment = 2
 
-[node name="HSeparator2" type="HSeparator" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Graphics/VBoxContainer" unique_id=149076331]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_i04ro")
 
-[node name="Audio" type="TabBar" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer"]
+[node name="Audio" type="TabBar" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer" unique_id=260369733]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio" unique_id=157362803]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -327,32 +326,32 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="MasterSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer" instance=ExtResource("3_eeyia")]
+[node name="MasterSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer" unique_id=872808476 instance=ExtResource("3_eeyia")]
 layout_mode = 2
 bus_name = "Master"
 
-[node name="MusicSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer" instance=ExtResource("3_eeyia")]
+[node name="MusicSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer" unique_id=607794208 instance=ExtResource("3_eeyia")]
 layout_mode = 2
 bus_name = "Music"
 
-[node name="SFXSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer" instance=ExtResource("3_eeyia")]
+[node name="SFXSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer" unique_id=1769118483 instance=ExtResource("3_eeyia")]
 layout_mode = 2
 bus_name = "SFX"
 
-[node name="VoiceSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer" instance=ExtResource("3_eeyia")]
+[node name="VoiceSlider" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer" unique_id=996359933 instance=ExtResource("3_eeyia")]
 layout_mode = 2
 
-[node name="VoiceContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer"]
+[node name="VoiceContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer" unique_id=747512725]
 layout_mode = 2
 
-[node name="VoiceLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer/VoiceContainer"]
+[node name="VoiceLabel" type="Label" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer/VoiceContainer" unique_id=1278070680]
 custom_minimum_size = Vector2(225, 0)
 layout_mode = 2
 text = "Voice:"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="VoiceButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer/VoiceContainer" groups=["Button"]]
+[node name="VoiceButton" type="OptionButton" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/TabContainer/Audio/VBoxContainer/VoiceContainer" unique_id=1595695060 groups=["Button"]]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -365,14 +364,14 @@ item_count = 1
 popup/item_0/text = "None Available"
 popup/item_0/id = 0
 
-[node name="SaveButton" type="Button" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer" groups=["Button"]]
+[node name="SaveButton" type="Button" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer" unique_id=1848647591 groups=["Button"]]
 layout_mode = 2
 focus_mode = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "Save"
 
-[node name="Label2" type="HSeparator" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer"]
+[node name="Label2" type="HSeparator" parent="PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer" unique_id=1295544093]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_0rip6")

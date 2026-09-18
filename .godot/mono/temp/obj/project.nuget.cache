@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "54wsSC+Fa1A=",
+  "success": true,
+  "projectFilePath": "C:\\USERS\\SIMON\\DOCUMENTS\\SPACE-COLONY-CHEESES\\Space Colony Cheeses.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Simon\\.nuget\\packages\\godot.sourcegenerators\\4.7.1\\godot.sourcegenerators.4.7.1.nupkg.sha512",
+    "C:\\Users\\Simon\\.nuget\\packages\\godotsharp\\4.7.1\\godotsharp.4.7.1.nupkg.sha512",
+    "C:\\Users\\Simon\\.nuget\\packages\\godotsharpeditor\\4.7.1\\godotsharpeditor.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

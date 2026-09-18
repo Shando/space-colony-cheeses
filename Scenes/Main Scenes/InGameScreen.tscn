@@ -368,7 +368,7 @@ mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="txtMessages" type="RichTextLabel" parent="VBoxContainer/Main/Label/HBoxContainer/PanelContainer2/Messages" unique_id=1009478496]
+[node name="hoverText" type="RichTextLabel" parent="VBoxContainer/Main/Label/HBoxContainer/PanelContainer2/Messages" unique_id=1009478496]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2

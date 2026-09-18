@@ -8,7 +8,7 @@ func lobby_joined(_lobby_name : String):
 	get_tree().change_scene_to_file("res://Menus/lobby.tscn")
 
 func lobby_join_failed(lobby_name : String, error : int):
-	#%JoinMessage.modulate = Color.INDIAN_RED
+	%JoinMessage.modulate = Color.INDIAN_RED
 	$"../SFX".stream = Globals.sfx_error
 	$"../SFX".play()
 

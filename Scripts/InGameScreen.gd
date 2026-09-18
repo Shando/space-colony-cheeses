@@ -4,7 +4,7 @@ extends Control
 @onready var dlgConf = $Dialog
 @onready var tmrTimer = $Timer
 @onready var hoverPopup = $VBoxContainer/Main/Label/HBoxContainer/PanelContainer2
-@onready var hoverText = $VBoxContainer/Main/Label/HBoxContainer/PanelContainer2/Messages/txtMessages
+@onready var hoverText = $VBoxContainer/Main/Label/HBoxContainer/PanelContainer2/Messages/hoverText
 @onready var btnCon1 = $VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4/PanelContainer/btnModule1
 @onready var btnCon2 = $VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer4/PanelContainer2/btnModule2
 @onready var btnCon3 = $VBoxContainer/Main/Modules/PanelContainer2/VBoxContainer/HBoxContainer7/PanelContainer/btnModule3
@@ -60,10 +60,12 @@ func _ready():
 	GDSync.expose_func(updatePortal)
 	GDSync.expose_func(updateCatalog)
 	GDSync.expose_func(updateConstruction)
+	GDSync.expose_func(updateHabitation)
 	GDSync.expose_func(updatePastureDome)
 	GDSync.expose_func(updateCheeseLab)
 	GDSync.expose_func(updateSausageLab)
 	GDSync.expose_func(updateLawOffice)
+	GDSync.expose_func(updateVeterinary)
 	sfx = get_node("/root/Spatial/Sfx")
 	disableBtnCon(true, 0)
 	set_process_input(true)
@@ -532,6 +534,12 @@ func _on_C2Done_pressed():
 					6, 36, 66, 96:
 						updateConstruction()
 						GDSync.call_func(updateConstruction)
+					7, 37, 67, 97:
+						updateVeterinary()
+						GDSync.call_func(updateVeterinary)
+					20, 50, 80, 110:
+						updateHabitation()
+						GDSync.call_func(updateHabitation)
 					21, 51, 81, 111:
 						updateCheeseLab()
 						GDSync.call_func(updateCheeseLab)
@@ -1343,7 +1351,7 @@ func _on_lblScoreP3_pressed():
 	sfx.play()
 
 	var tTmp = get_tree().get_root().get_node("Spatial/Camera")
-	tTmp.traslation = Globals.tCamPos[3]
+	tTmp.position = Globals.tCamPos[3]
 	tTmp.rotation = Vector3(-30, 0, 0)
 
 func _on_lblScoreP4_pressed():
@@ -1711,6 +1719,9 @@ func updatePortal():
 func updateCatalog():
 	global.tCatalog[Globals.iMyPN] = true
 
+func updateHabitation():
+	global.tHabitation[Globals.iMyPN] = true
+
 func updateConstruction():
 	global.tConstruction[Globals.iMyPN] = true
 
@@ -1725,3 +1736,6 @@ func updateSausageLab():
 
 func updateLawOffice():
 	global.tLawOffice[Globals.iMyPN] = true
+
+func updateVeterinary():
+	global.tVeterinary[Globals.iMyPN] = true

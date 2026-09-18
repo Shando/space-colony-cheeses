@@ -21,7 +21,7 @@ class_name SettingsDataResource
 # there must to be at least ONE entry.
 # The following is the default window resolution. This will override any project settings.
 @export var resolution : Vector2i
-@export var resolution_index : int = 6 # select index for default resolution
+@export var resolution_index : int = 8 # select index for default resolution
 
 # MSAA: set both value and index the same
 # 0 = None, 1 = 2X, 2 = 4X, 3 = 8X

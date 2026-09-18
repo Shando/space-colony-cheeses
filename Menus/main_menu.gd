@@ -64,7 +64,7 @@ func connected():
 
 func connection_failed(error : int):
 	%Connect.disabled = false
-	#%Message.modulate = Color.INDIAN_RED
+	%Message.modulate = Color.INDIAN_RED
 
 	match(error):
 		ENUMS.CONNECTION_FAILED.INVALID_PUBLIC_KEY:

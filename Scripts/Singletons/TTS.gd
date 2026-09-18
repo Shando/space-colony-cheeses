@@ -8,11 +8,10 @@ var dProfanity = {}
 # Call to get list of all available voices
 # Returns an Array of voice information dictionaries.
 #
-# Each Dictionary contains two String entries:
+# Each Dictionary contains three String entries:
 #
 #	name is voice name.
 #	id is voice identifier.
-#
 #	language is language code in lang_Variant format.
 #		The lang part is a 2 or 3-letter code based on the ISO-639 standard, in lowercase.
 #		The Variant part is an engine-dependent string describing country, region or/and dialect.
@@ -20,15 +19,9 @@ func getVoices():
 	voices = DisplayServer.tts_get_voices()
 	return voices
 
-# TODO: Implement local language check
-# Call to get list of voices for selected Language
-func getVoicesByLang(inLang = "en"):
-	voices = DisplayServer.tts_get_voices_for_language(inLang)
-	return voices
-
 # Call to set both voiceID and LANGUAGE
 func setVoice(iIn = 0):
-	voiceID = voices[iIn]
+	voiceID = voices[iIn - 1]
 
 # Call to set voiceVolume
 func setVolume():

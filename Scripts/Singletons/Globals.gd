@@ -1,6 +1,7 @@
 extends Node
 
 var tAvailableMods = []		# Available Modules - from 1 - COUNT NB: Need to ensure 0 is a dummy value
+# tAvailableMods.append({"I": 0, "F": "Dummy.tscn", "F2": "Dummy_128.jpg", "N": "Dummy", "CO": 0, "CA": 0, "EP": 0, "ER": 0, "OU": 0, "ST": 0, "ON": "N", "SI": "N"})
 var tCamPos = [
 	{"xx": 0, "yy": 0, "zz": 0},
 	{"xx": 0, "yy": 0, "zz": 0},
@@ -8,7 +9,7 @@ var tCamPos = [
 	{"xx": 0, "yy": 0, "zz": 0},
 	{"xx": 0, "yy": 0, "zz": 0},
 	]			# Camera position for viewing StartUp Module of each player {"xx": 0, "yy": 0, "zz": 0}
-							# tAvailableMods.append({"I": 0, "F": "Dummy.tscn", "F2": "Dummy_128.jpg", "N": "Dummy", "CO": 0, "CA": 0, "EP": 0, "ER": 0, "OU": 0, "ST": 0, "ON": "N", "SI": "N"})
+
 var tREOther = [
 	{"giftboxes": 10, "keepunsold": false, "losegeo": false, "newdisease": false, "labs": 4, "cureall": false, "losebarn": false, "reroll": false, "nocatalog": false},
 	{"giftboxes": 10, "keepunsold": false, "losegeo": false, "newdisease": false, "labs": 4, "cureall": false, "losebarn": false, "reroll": false, "nocatalog": false},

@@ -168,7 +168,7 @@ The **Background Images** are from **NASA** (https://www.nasa.gov/) and the **ES
 
 The **Music** was purchased from **Arteria3D** (https://arteria3d.myshopify.com/)
 
-The **Sound Effects** are by **TBA**
+The **Sound Effects** are from **Kenney.nl** (https://kenney.nl), **Wuzzy** (https://opengameart.org/content/wooden-dice-on-wodden-table-roll) & **Jesus Lastra** (https://jalastram.itch.io/50-gui-sound-effects)
 
 The **PBR Textures** are from **freepbr** (https://freepbr.com/)
 

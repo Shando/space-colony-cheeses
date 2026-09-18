@@ -217,7 +217,6 @@ func startUpPlaced(res):
 	var node = get_tree().get_root().get_node("Spatial")
 	# {"bOn": false, "x": 0, "y": 0}
 	Globals.bDrag = false
-	print("startupPlaced: X: " + str(res.x) + " | Y: " + str(res.y))
 	var node1 = get_tree().get_root().get_node("Spatial/CanvasLayer/UI/InGame")
 
 	if res.bOn < 2:
@@ -257,7 +256,6 @@ func startUpPlaced(res):
 			var vTmpPos = Vector3(0.0, 1.0, 0.0)
 			vTmpPos.x = node.tBoardLoc[res.x][res.y][0]
 			vTmpPos.z = node.tBoardLoc[res.x][res.y][1]
-			print(vTmpPos)
 			Globals.dragObject.set_position(vTmpPos)
 			Globals.iPlacedX = res.x
 			Globals.iPlacedY = res.y
@@ -324,18 +322,35 @@ func placeModules(bIn):
 					await(node1.updateButtons())
 					await(node1.updateGUI(sTxt, [], 5))
 				else:
-					Globals.iWait = Messages.Msg.WAIT_PLACE_MORE_MODULES
+					var bOK = true
 
-					if Globals.iModules > 1:
-						sTxt = "[PLACE MODULES][br]You can place up to " + str(Globals.iModules) + " modules."
+					if node.tNumModules[Globals.iMyPN] > 12:
+						bOK = false
+						var tNum = 30 * node.iCurPlay
+
+						for x in range(1, 17):
+							for y in range(1, 13):
+								if node.tBuildings[x][y] == tNum - 10:
+									if node.tModules[x][y].online == "Y":
+										bOK = true
+
+					if bOK:
+						Globals.iWait = Messages.Msg.WAIT_PLACE_MORE_MODULES
+
+						if Globals.iModules > 1:
+							sTxt = "[PLACE MODULES][br]You can place up to " + str(Globals.iModules) + " modules."
+						else:
+							sTxt = "[PLACE MODULES][br]You can place one module."
+
+						sTxtSpeech = sTxt + "[br]Press OK when you have placed your module, press RESET to undo, and, or, press DONE to finish your turn."
+						sTxt += "[br]Press OK when you have placed your module, press RESET to undo, and (or) press DONE to finish your turn."
+
+						await(node1.updateButtons())
+						await(node1.updateGUI(sTxt, [], 5, sTxtSpeech))
 					else:
-						sTxt = "[PLACE MODULES][br]You can place one module."
-
-					sTxtSpeech = sTxt + "[br]Press OK when you have placed your module, press RESET to undo, and, or, press DONE to finish your turn."
-					sTxt += "[br]Press OK when you have placed your module, press RESET to undo, and (or) press DONE to finish your turn."
-
-					await(node1.updateButtons())
-					await(node1.updateGUI(sTxt, [], 5, sTxtSpeech))
+						sTxt = "[PLACE MODULES][br]You cannot place any modules as your Habitation Module is Offline![br]Press OK to continue."
+						await(node1.updateGUI(sTxt))
+						Globals.iWait = Messages.Msg.WAIT_NO_MODULES
 			else:
 				sTxt = "[PLACE MODULES][br]You do not have any modules you can place![br]Press OK to continue."
 				await(node1.updateGUI(sTxt))

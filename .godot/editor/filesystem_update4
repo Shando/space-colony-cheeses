@@ -1,6 +1,7 @@
-res://GD-SyncTemplates/TextChat/text_chat.tscn
+res://Main.tscn
 res://addons/GD-Sync/UI/ConfigMenu/GD-Theme.tres
 res://Scenes/Main Scenes/Main.tres
 res://Scenes/Support Scenes/octagon_fissure.gdshader
 res://Materials/outline.gdshader
-res://Scripts/Singletons/TTS.gd
+res://Scripts/InGameScreen.gd
+res://GD-SyncTemplates/LobbyBrowser/lobby_browser.gd

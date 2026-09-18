@@ -53,25 +53,21 @@ var save_file_name = str("settings_data", ProjectSettings.get_setting("applicati
 # but there must to be at least ONE entry.
 # Make sure your default resolution is set in the settings_data_resource.gd file
 @export var resolutions : Dictionary = {"3840x2160 (16:9)": Vector2i(3840, 2160),
-										"2560x1440 (16:9)": Vector2i(2560, 1440),
-										"1920x1080 (16:9)": Vector2i(1920, 1080),
-										"1600x900 (16:9)": Vector2i(1600, 900),
-										"1536x864 (16:9)": Vector2i(1536, 864),
-										"1366x768 (16:9)": Vector2i(1366, 768),
-										"1280x720 (16:9)": Vector2i(1280, 720),
+										"3440x1440 (21:9)": Vector2i(3440, 1440),
 										"2560x1600 (16:10)": Vector2i(2560, 1600),
+										"2560x1440 (16:9)": Vector2i(2560, 1440),
+										"2560x1080 (21:9)": Vector2i(2560, 1080),
 										"1920x1200 (16:10)": Vector2i(1920, 1200),
+										"1920x1080 (16:9)": Vector2i(1920, 1080),
 										"1680x1050 (16:10)": Vector2i(1680, 1050),
-										"1440x900 (16:10)": Vector2i(1440, 900),
-										"1280x800 (16:10)": Vector2i(1280, 800),
-										"1280x1024 (4:3)": Vector2i(1280, 1024)}
+										"1600x900 (16:9)": Vector2i(1600, 900)}
 
 # MSAA:
 # Make sure you default MSAA mode is set in the settings_data_resource.gd file
 var msaa_modes : Dictionary =  {"None": Viewport.MSAA_DISABLED, 		# index/value = 0
-										"2x" : Viewport.MSAA_2X,		# index/value = 1
-										"4x" : Viewport.MSAA_4X,		# index/value = 2
-										"8x" : Viewport.MSAA_8X}		# index/value = 3
+								"2x" : Viewport.MSAA_2X,			# index/value = 1
+								"4x" : Viewport.MSAA_4X,			# index/value = 2
+								"8x" : Viewport.MSAA_8X}			# index/value = 3
 
 # Make sure you default frs_mode is set in the settings_data_resource.gd file
 var fsr_modes : Dictionary =  { "Bilinear": Viewport.SCALING_3D_MODE_BILINEAR, 	# index/value = 0
@@ -186,7 +182,8 @@ func load_settings():
 			for resolution in resolutions:
 				resolution_option.add_item(resolution)
 
-			await TTS.getVoices()
+			TTS.getVoices()
+
 			voice_button.clear()
 			voice_button.add_item("None")
 
@@ -426,4 +423,5 @@ func set_theme_to(theme_path: String, tab_container_size: Vector2 = tab_containe
 	tab_container.self_modulate = tab_color
 
 func _on_voice_button_item_selected(index: int) -> void:
+	TTS.setVoice(index)
 	Globals.optVoice = index

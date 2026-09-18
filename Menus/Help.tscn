@@ -83,10 +83,9 @@ text = "CLICK HERE TO READ ALOUD"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-current_tab = 5
+current_tab = 0
 
 [node name="Overview" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=867361503]
-visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 5
@@ -101,11 +100,11 @@ text = "[b][font_size=24]Welcome to Space Colony Cheeses II - The Computer Game[
 
 The colonisation of space is going smoothly. Spaceships fly on schedule from colony to colony, bearing the imports and exports of dozens of planets. But most of the trade is centred on necessities. There's no way to send a tasteful Christmas gift of assorted cheeses and beef sausages to a loved one on another planet. You've been assigned to change all that.
 
-You are in charge of colonizing a newly discovered world, Bos IV. Bos IV is similar in most ways to Bos III (see the [b]Space Colony Cheeses[/b] board game) but you [b][color=red]cannot[/color][/b] build Space Ports here (the natives won’t allow it!) and it has less sunlight, so you [b][color=red]cannot[/color][/b] use Solar Power! Instead the boffins have perfected [b]Portals[/b] for travelling to Bos III (which does have Space Ports) and they have also discovered that Bos IV has an almost unlimited amount of [b]Yapthalene Crystals[/b] (which come in four funky colours - Green, Orange, Sky Blue & Yellow) that can be grown (and mined) in special areas called [b]Crystal Mines[/b]. Your task is to build a thriving, profitable, dairy colony using these crystals for power, as well as geothermal energy from certain areas of the planet (anywhere you can see steam rising from the ground is where you can place your [b]Geothermal Powerplants[/b]). You must choose when, where and how to expand. You'll have to balance the need for money-making against the need for energy production. If you can afford it, you may want to expand into other dairy products, increase your storage capacity, or just harass the competition with endless lawsuits. The choices, and the responsibility, are yours.
+You are in charge of colonising a newly discovered world, Bos IV. Bos IV is similar in most ways to Bos III (see the [b]Space Colony Cheeses[/b] board game) but you [b][color=red]cannot[/color][/b] build Space Ports here (the natives won’t allow it!) and it has less sunlight, so you [b][color=red]cannot[/color][/b] use Solar Power! Instead the boffins have perfected [b]Portals[/b] for travelling to Bos III (which does have Space Ports) and they have also discovered that Bos IV has an almost unlimited quantity of [b]Yapthalene Crystals[/b] (which come in four funky colours - Green, Orange, Sky Blue & Yellow) that can be grown (and mined) in special areas called [b]Crystal Mines[/b]. Your task is to build a thriving, profitable, dairy colony using these crystals for power, as well as geothermal energy from certain areas of the planet (anywhere you can see steam rising from the ground is where you can place your [b]Geothermal Powerplants[/b]). You must choose when, where and how to expand. You'll have to balance the need for money-making against the need for energy production. If you can afford it, you may want to expand into other dairy products, increase your storage capacity, or just harass the competition with endless lawsuits. The choices, and the responsibility, are yours.
 
 Finally, last year saw one of the biggest NanoTech breakthroughs in history - the creation of a special breed of Cow (the Nano-Cow). These Nano-Cows are invisible to the human eye, but can be milked and slaughtered using special machinery. To populate your pastures with these amazing creatures, you firstly build a [b]Pasture Dome[/b], then you release the special Nano-Fluid onto the crystals and, in a few short minutes, there will literally be billions of Nano-Cows living and breeding in your [b]Pasture Dome[/b] and spreading to your [b]Barns[/b], with nothing for you to do but ensure the modules are maintained and, of course, reap the rewards.
 
-[b]Space Colony Cheeses II[/b] is a light-hearted, non-violent game for 2-4 Players, based on [b]Space Colony Cheeses[/b], a board game by [b]The Mad Game Designer (aka Michael Fischer)[/b] - http://www.cke1st.com/m_games1.htm."
+[b]Space Colony Cheeses II[/b] is a light-hearted, non-violent game for 2-4 players, based on [b]Space Colony Cheeses[/b], a board game by [b]The Mad Game Designer (aka Michael Fischer)[/b] - http://www.cke1st.com/m_games1.htm."
 
 [node name="Introduction" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=1572988759]
 visible = false
@@ -123,15 +122,15 @@ theme_override_fonts/normal_font = ExtResource("5_5vlgg")
 bbcode_enabled = true
 text = "[b][font_size=24]I. Introduction[/font_size][/b]
 
-The ultimate goal of the game is to make money ($). You do this by adding modules to your colony. Some modules generate $, and some [color=Red]do not[/color], but all can be useful to the colony. Each Player begins the game with $100.
+The ultimate goal of the game is to make money ($). You do this by adding modules to your colony. Some modules generate $, and some [color=Red]do not[/color], but all can be useful to the colony. Each player begins the game with $100.
 
-You roll a dice to see who goes first. Each colony MUST begin with a [b]Start-Up[/b] module. A colony can [b]only[/b] be started in one of the four (4) coloured Quadrants of the Board. Only [b]one[/b] Player can start in any one (1) Quadrant and a Player may [b][color=red]not[/color][/b] start multiple colonies.
+You roll a dice to see who goes first. Each colony MUST begin with a [b]Start-Up[/b] module. A colony can [b]only[/b] be started in one of the four (4) coloured quadrants of the board. Only [b]one[/b] player can start in any one (1) quadrant and a player may [b][color=red]not[/color][/b] start multiple colonies.
 
 [b][font_size=24]II. The Map[/font_size][/b]
 
 This is unlike most maps you will have seen. There are two kinds of grid units, [b]squares[/b] and [b]octagons[/b]. A square has only four neighbours, while an octagon has eight. This can be important when arranging your modules.
 
-The map has two kinds of features, [b]Geothermal Steam[/b] and [b]Lush Pastures[/b]. [b]Geothermal Steam[/b] can be found anywhere that you see steam rising from the ground and are the [b]only[/b] places that you can build [b]Geothermal Plants[/b]. [b]Lush Pastures[/b] have grass growing on them, and give a bonus to any [b]Barns[/b] that are built on them.
+The map has two kinds of features, [b]Geothermal Steam[/b] and [b]Lush Pastures[/b]. [b]Geothermal Steam[/b] can be found anywhere that you see steam rising from the ground and are the [b]only[/b] places that you can build [b]Geothermal Powerplants[/b]. [b]Lush Pastures[/b] have grass growing on them, and give a bonus to any [b]Barns[/b] that are built on them.
 
 [b][font_size=24]III. Building Colonies[/font_size][/b]
 
@@ -412,6 +411,7 @@ text = "[b][font_size=24]Mega-Barn Modules[/font_size]
 These count as two [b]Barn[/b] modules for commodity output, and as one [b]Barn[/b] module for energy usage."
 
 [node name="Modules III" type="MarginContainer" parent="PanelContainer/VBoxContainer/TabContainer" unique_id=201632772]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 5
@@ -698,7 +698,7 @@ The colony with the [b]most[/b] money at the end of 15 turns is the winner.
 
 If it is a tie, then you can vote to go to [b]sudden death[/b], where you have 3 extra rounds to try to beat your opposition.
 
-This can be repeated ad-infinitum, if you so desire, but has to be agreed to by [b]all[/b] Players after every extra 3 rounds.
+This can be repeated ad infinitum, if you so desire, but has to be agreed to by [b]all[/b] players after every extra 3 rounds.
 
 
 
@@ -730,6 +730,8 @@ text = "[b][font_size=24]KEYBOARD and MOUSE[/font_size][/b]
 
 [b]F3[/b] stops any current speech.
 
+[b]F12[/b] can be used to quit the game.
+
 [b]W, A, S, D[/b] move the camera [b]Forwards[/b], [b]Left[/b], [b]Backwards[/b] & [b]Right[/b].
 [b]DOWN Arrow looks down[/b].
 [b]UP Arrow looks up[/b].
@@ -757,13 +759,13 @@ text = "[b][font_size=24]CREDITS[/font_size][/b]
 
 [b]Space Colony Cheeses II[/b] is based on [b]Space Colony Cheeses[/b], a board game by [b]The Mad Game Designer (aka Michael Fischer)[/b] - (http://www.cke1st.com/m_games1.htm)
 
-The [b]Models[/b] for the buildings were purchased from [b]Turbosquid[/b] (https://www.turbosquid.com/3d-models/3d-model-23-sci-fi-buildings-pack/867011) and were created by [b]kvakling[/b] (https://www.turbosquid.com/Search/3D-Models/kvakling)
+The [b]Models[/b] for the buildings were purchased from [b]TurboSquid[/b] (https://www.turbosquid.com/3d-models/3d-model-23-sci-fi-buildings-pack/867011) and were created by [b]kvakling[/b] (https://www.turbosquid.com/Search/3D-Models/kvakling)
 
 The [b]Background Images[/b] are from [b]NASA[/b] (https://www.nasa.gov/) and the [b]ESA[/b] (https://www.esa.int/)
 
 The [b]Music[/b] was purchased from [b]Arteria3D[/b] (https://arteria3d.myshopify.com/)
 
-The [b]Sound Effects[/b] are by [b]TBA[/b]
+The [b]Sound Effects[/b] are from [b]Kenney.nl[/b] (https://kenney.nl), [b]Wuzzy[/b] (https://opengameart.org/content/wooden-dice-on-wodden-table-roll) & [b]Jesus Lastra[/b] (https://jalastram.itch.io/50-gui-sound-effects)
 
 The [b]PBR Textures[/b] are from [b]freepbr[/b] (https://freepbr.com/)
 
@@ -774,7 +776,7 @@ The [b]Particles[/b] are from the [b]Particle Pack by Kenney[/b] (https://kenney
 We have also used the [b]Universal Settings Plugin[/b] from [b]antzGames[/b] (https://github.com/antzGames/Godot-Universal-Settings-Plugin)
 
 
-[b]Copyright (c) Spinalsoft AU 2025[/b]"
+[b]Copyright (c) Spinalsoft AU 2025 - 2027[/b]"
 
 [connection signal="draw" from="PanelContainer/VBoxContainer" to="." method="_on_VBoxContainer_draw"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/PanelContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
