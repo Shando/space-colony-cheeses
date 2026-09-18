@@ -1427,7 +1427,7 @@ func myDebug(Dict = {}):
 
 func _ready():
 	hover = get_tree().get_root().get_node("Spatial/CanvasLayer/UI/InGame/VBoxContainer/Main/Label/HBoxContainer/PanelContainer2")
-	hoverTxt = get_tree().get_root().get_node("Spatial/CanvasLayer/UI/InGame/VBoxContainer/Main/Label/HBoxContainer/PanelContainer2/Messages/txtMessages")
+	hoverTxt = get_tree().get_root().get_node("Spatial/CanvasLayer/UI/InGame/VBoxContainer/Main/Label/HBoxContainer/PanelContainer2/Messages/hoverText")
 	Globals.music.shuffle()
 	var curMusic = Globals.music[randi() % 20]
 	var audio_stream = load("res://Assets/Sounds/Music/" + curMusic)

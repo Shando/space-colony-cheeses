@@ -5,3 +5,5 @@ res://Scenes/Support Scenes/octagon_fissure.gdshader
 res://Materials/outline.gdshader
 res://Scripts/InGameScreen.gd
 res://GD-SyncTemplates/LobbyBrowser/lobby_browser.gd
+res://Main.gd
+res://Scenes/Main Scenes/InGameScreen.tscn

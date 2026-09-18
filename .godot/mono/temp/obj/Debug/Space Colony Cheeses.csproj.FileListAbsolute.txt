@@ -1,0 +1,18 @@
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\bin\Debug\Space Colony Cheeses.deps.json
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\bin\Debug\Space Colony Cheeses.runtimeconfig.json
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\bin\Debug\Space Colony Cheeses.dll
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\bin\Debug\Space Colony Cheeses.pdb
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Colony Cheeses.csproj.AssemblyReference.cache
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Colony Cheeses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Colony Cheeses.AssemblyInfoInputs.cache
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Colony Cheeses.AssemblyInfo.cs
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Colony Cheeses.csproj.CoreCompileInputs.cache
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Colony Cheeses.sourcelink.json
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Co.876456A8.Up2Date
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Colony Cheeses.dll
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\refint\Space Colony Cheeses.dll
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Colony Cheeses.pdb
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\Space Colony Cheeses.genruntimeconfig.cache
+C:\Users\Simon\Documents\space-colony-cheeses\.godot\mono\temp\obj\Debug\ref\Space Colony Cheeses.dll

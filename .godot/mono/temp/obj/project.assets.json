@@ -94,11 +94,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\USERS\\SIMON\\DOCUMENTS\\SPACE-COLONY-CHEESES\\Space Colony Cheeses.csproj",
+      "projectUniqueName": "C:\\Users\\Simon\\Documents\\space-colony-cheeses\\Space Colony Cheeses.csproj",
       "projectName": "Space Colony Cheeses",
-      "projectPath": "C:\\USERS\\SIMON\\DOCUMENTS\\SPACE-COLONY-CHEESES\\Space Colony Cheeses.csproj",
+      "projectPath": "C:\\Users\\Simon\\Documents\\space-colony-cheeses\\Space Colony Cheeses.csproj",
       "packagesPath": "C:\\Users\\Simon\\.nuget\\packages\\",
-      "outputPath": "C:\\USERS\\SIMON\\DOCUMENTS\\SPACE-COLONY-CHEESES\\.godot\\mono\\temp\\obj\\",
+      "outputPath": "C:\\Users\\Simon\\Documents\\space-colony-cheeses\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -173,7 +173,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
